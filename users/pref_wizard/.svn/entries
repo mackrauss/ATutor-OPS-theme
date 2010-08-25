@@ -1,0 +1,52 @@
+8
+
+dir
+10079
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/themes/default/users/pref_wizard
+http://atutorsvn.atrc.utoronto.ca/repos/atutor
+
+
+
+2010-05-05T15:54:04.619517Z
+9890
+laurel
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+7fd968fe-c0db-0310-82a6-d34183d92596
+
+initialize.tmpl.php
+file
+
+
+
+
+2010-07-08T15:20:56.000000Z
+85ad217b0494ca24a11a5f70dac974ba
+2010-04-22T15:52:05.652900Z
+9770
+laurel
+
+index.tmpl.php
+file
+
+
+
+
+2010-07-08T15:20:56.000000Z
+9c9ad0e5853007dd7681c4aa3031b3a2
+2010-05-05T15:54:04.619517Z
+9890
+laurel
+

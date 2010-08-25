@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family: Verdana, Helevetica, Arial, sans-serif;
+	
+	font-size: 10pt;
+	margin-left:10%;
+	margin-right:10%;
+}
+.page_wrapper{
+	width:90%;
+	margin:auto;
+	background-color: #ffffff;
+	border: thin solid blue;
+}
+p {
+    margin: 0.5em 0em 1em 0em;
+    line-height: 190%;
+	font-size: .8em;
+}
+
+p a {
+    text-decoration: underline;
+}
+
+p a:visited {
+	color: #3F2670;
+    background-color: transparent;
+}
+
+p a:active {
+	color: #A50707;
+    background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: 100% Verdana, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding-top: 0.5em;    /*border-bottom: 1px solid #B8AE9C;*/
+}
+
+h1 {
+	font-size: 160%;
+	color: #000;
+	font-weight:bold;
+	padding-bottom:.5em;
+	background-image:url(users/color-swatch.png);
+	background-repeat:no-repeat;
+	padding-left:35px;
+	background-position:0 15px;
+}
+
+h2 {
+    font-size: 150%;
+}
+h2.sidebox{
+    font-size: 110%;
+}
+h3 {
+	font-size: 110%;
+	margin-bottom:10px;
+	font-weight:bold;
+	font-family: Helvetica, "Trebuchet MS", sans-serif;	
+	}
+
+h4 {
+    font-size: 120%;
+}
+
+
+h5 {
+    font-size: 100%;
+}
+
+a:link, a:visited {text-decoration:none; color:#487CD2; font-weight:bold;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+fieldset {border:0 !important; }
+
+div#feedback {margin-bottom:16pt;}
+
+div#error {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid #DD0000;
+	padding: 5px;
+	background-color: #fff;
+	color: #A50707;
+	background-color: #F4DCDC;
+	padding-left: 25px;
+	font-weight: bold;
+}
+
+.buttons {
+
+	padding:8px;
+}
+.buttons input {
+	background-color: #3866C4;
+	font-weight: normal;
+	border:  #AAA  solid 1px;
+	color:#fff;
+}

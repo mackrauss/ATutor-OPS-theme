@@ -1,0 +1,132 @@
+div.input-form {
+	/* -- armin, there are 2 forms.css. one in the INCLUDE folder, and this one. Which one to use? Can one be deleted? */
+	/*joel; alignment margin-left:auto;*/  
+	margin-right:auto;
+
+	margin-bottom: 20px;
+	line-height:150%;
+	background-color: #F3F6FA;
+
+	padding:.2em;
+	/*Armin*/
+	width: 95%;
+	border-radius:.5em;
+	/* NO MORE MOZ -- j  -moz-border-radius: .5em .5em .5em .5em;
+	  -moz-box-shadow:.1em .1em .2em #999999;
+	  box-shadow: .1em .1em .2em #999999;
+         */
+}
+
+div.input-form div.row h3 {
+	margin-left: 0px;
+}
+
+div.input-form div.row {
+	background-color: #F3F6FA;
+	padding:0.5em;
+}
+
+/*<img> and <a> tags: on mouse hover the color of the background will keep the same!*/
+div.input-form div.row img a:hover{
+    background-color:#red;
+}
+
+div.input-form .footer {
+	border-top: 1px solid #F9F6F2;
+}
+
+div.input-form p {
+	margin-left: 0px;
+}
+
+div.input-form input {
+	z-index: 2;
+}
+div.input-form textarea {
+	border: 1px solid #595241;
+	width: 98%;
+	padding: 2px;
+	margin-right: 2px;
+}
+
+div.input-form input[type=text], div.input-form input[type=password] {
+	border: 1px solid #595241;
+	padding: 2px;
+	max-width: 60%;
+	background-color:white;
+}
+
+div.input-form textarea:focus, div.input-form  input[type=password]:focus, div.input-form  input[type=text]:focus{
+	border:1px solid #545454;
+	padding: 2px;
+}
+
+input[type=checkbox]{
+
+	background-color: #fff;
+}
+
+div.input-form div.buttons {
+
+	padding:8px;
+}
+div.input-form div.buttons input {
+	background-color: #3866C4;
+	font-weight: normal;
+	border:  #AAA  solid 1px;
+	color:#fff;
+}
+.formfield:focus{
+	background-color: #fff;
+}
+
+#ot:focus{
+	background-color: #fff;
+}
+
+/*Added by Silvia*/
+div.input-form div.row_alternatives {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+}
+
+/*Added by Armin*/
+div.input-form div.row_explain {
+	padding: 10px 8px 10px;
+	font-size:8pt;
+}
+
+/* new in ATutor 2.0 */
+input[type=text]{
+	
+	
+}
+input[type=password]{
+	
+	
+}
+
+div.input-form input[type=submit]{
+	border-radius:.3em;
+	
+
+}
+
+input[type=reset]{
+	
+}
+
+.test_instruction{
+	background-color: #f3f3f3; 
+	padding: 5px 10px; 
+	margin: 0px; 
+	border-top: 1px solid;
+}
+.test_points{
+	float: right; 
+	width: 50%; 
+	text-align: right; 
+	font-weight: bold;
+}
