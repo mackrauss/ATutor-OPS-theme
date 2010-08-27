@@ -1,0 +1,11 @@
+# Ignore Mac OS X hidden files
+.DS_Store
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Ignore Windows Thumbs.db file
+Thumbs.db
+
+#Ignore svn folders
+.svn
