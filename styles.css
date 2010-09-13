@@ -478,6 +478,23 @@ div#breadcrumbs {
 
 div#breadcrumbs a { color:#999999;}
 
+/* Armin 10.09.2010 style shortcut list */
+div#shortcuts {
+	font-size: 8pt;
+	float:right;
+	margin-right: 1em;
+}
+
+#shortcuts li {
+	display:inline;
+	float:left;
+	margin-bottom:0;
+	margin-left:0.45em;
+	margin-right:0.45em;
+	margin-top:0;
+	position:relative;
+	white-space:nowrap;
+}
 
 h2.page-title {
 	clear:right;
@@ -1009,7 +1026,8 @@ h4.box {
 	font-size:8pt;
 	padding: 2px;
 	font-weight:bold;
-	background-image:url(images/slidemenu-h-bg.png);
+/* Armin 01.09.2010: image does not exist so don't call it to reduce error messages' */
+/* 	background-image:url(images/slidemenu-h-bg.png); */
 	background-repeat:repeat-x;
 	border-top-width: 1px;
 	border-right-width: 1px;
@@ -1285,6 +1303,13 @@ div#content-text {
 #content-text a:link {
 	font-weight: normal;
 	color: #487CD2;
+	text-decoration:underline;
+}
+
+/* Armin 30.08.2010: Added special syle for visited links in content*/
+#content-text a:visited {
+	font-weight: normal;
+	color: #3F2670;
 	text-decoration:underline;
 }
 
