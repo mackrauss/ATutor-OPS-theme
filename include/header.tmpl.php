@@ -91,7 +91,7 @@ global $system_courses, $_custom_css, $db;
 	<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#content" accesskey="c">
 	<img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_content'); ?> ALT+c" /></a>		
 
-	<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#menu<?php echo $_REQUEST['cid']  ?>"  accesskey="m"><img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_menu'); ?> ALT+m" /></a>
+	<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#menu<?php echo htmlentities_utf8($_REQUEST['cid']); ?>"  accesskey="m"><img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_menu'); ?> ALT+m" /></a>
 	
 	<?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): 
 		echo '<div class="site-name">'.stripslashes(SITE_NAME).'</div>'; 
@@ -236,7 +236,17 @@ global $system_courses, $_custom_css, $db;
 		  </div>
 	  <?php } ?>
 
-		 
+<!-- Armin 10.09.2010: Enable shortcuts?? -->
+	  <?php if ($this->shortcuts): ?>
+      <div id="shortcuts">
+	      <ul>
+		      <?php foreach ($this->shortcuts as $link): ?>
+			      <li><a href="<?php echo $link['url']; ?>"><!--<img src="<?php echo $link['icon']; ?>" alt="<?php echo $link['title']; ?>"  title="<?php echo $link['title']; ?>" class="shortcut_icon"/>--> <?php echo $link['title']; ?> </a></li>
+		      <?php endforeach; ?>
+	      </ul>
+      </div>
+      <?php endif; ?>
+      </div>
     
 </div>
 <div class="clear"></div>
