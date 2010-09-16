@@ -93,7 +93,8 @@ div.input-form div.row_alternatives {
 /*Added by Armin*/
 div.input-form div.row_explain {
 	padding: 10px 8px 10px;
-	font-size:8pt;
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font-size: 82%;
 }
 
 /* new in ATutor 2.0 */
