@@ -8,7 +8,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin:0px;
 	margin-top: -10px;
-	font-size: 9.5pt;
+	font-size: .8em;
 }
 
 .page_wrapper{
@@ -20,7 +20,8 @@ body {
 p {
     margin: 0.5em 0em 1em 0em;
     line-height: 190%;
-	font-size: 9.5pt;
+    /* Armin 15.09.2010: replace static font-size 9.5pt with 95% */
+	font-size: 95%;
 }
 
 p a {
@@ -44,19 +45,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-font-size: 16pt;
+	/* Armin 15.09.2010: replace static font-size 16pt with 166% */
+	font-size: 166%;
 	color: #000;
 	font-weight:bold;
+	margin-bottom: 5px;
 }
 
 h2 {
-   
 	clear:right;
 	margin-bottom: 8pt;
 	margin-top:1em;
 	padding:0px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size:12pt;
+	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
+	font-size: 125%;
 	font-weight:bold;
 	color:#000;
 }
@@ -64,8 +67,9 @@ h2.sidebox{
     font-size: 110%;
 }
 h3 {
-	font-size:12pt;
-margin-bottom:8pt;
+	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
+	font-size: 125%;
+    margin-bottom:8pt;
 	font-family: Arial, Helvetica, sans-serif;
 	margin-top:16pt;
 	color:#000;
@@ -470,7 +474,8 @@ a#back-to {
 div#breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
 	clear:both;
-    font-size: 7pt;
+	/* Armin 15.09.2010: replace static font-size 7pt with 73% */
+    font-size: 73%;
 	padding:3px;
 	float:left;
 	margin-left:6.2em;
@@ -480,7 +485,8 @@ div#breadcrumbs a { color:#999999;}
 
 /* Armin 10.09.2010 style shortcut list */
 div#shortcuts {
-	font-size: 8pt;
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font-size: 82%;
 	float:right;
 	margin-right: 1em;
 }
@@ -501,15 +507,11 @@ h2.page-title {
 	margin-bottom: 10px;
 	padding:0px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size:14pt;
+	/* Armin 15.09.2010: replace static font-size 14pt with 146% */
+	font-size: 146%;
 	font-weight:bold;
 	color:#000;
 }
-
-h1 {
-	margin-bottom: 5px;
-}
-
 
 div#help {
 	border-left: 1px solid black;
@@ -548,7 +550,8 @@ div#toctoggle {
 h1#section-title {
 	/*white-space:nowrap;*/
 	/*margin-left:1em;*/
-	font-size:14pt;
+	/* Armin 15.09.2010: replace static font-size 14pt with 146% */
+	font-size: 146%;
 	color:#3866C4;
 	font-weight:bold;
 	margin-bottom:1em;
@@ -560,7 +563,8 @@ div#top-links {
 /* 	margin-right:5px; */
 	margin-top:-3em;
 	white-space:nowrap;
-	font-size:8pt;
+	/* Armin 15.09.2010: Replace fixed font-size 8pt with 82% */
+	font-size: 82%;
 	font-weight:normal;
 	
 }
@@ -569,10 +573,10 @@ div#top-links a:link, div#top-links a:visited {
 	text-decoration:none;
 	margin-left:3px;
 	margin-top:20px;
-color: #5984C4;
+	color: #5984C4;
 	font-style:normal;
-	font-size:8pt;
-	
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font-size: 82%;
 	}
 	
 div#top-links a:focus, a:hover{
@@ -617,11 +621,12 @@ a#editor-link.on {
 
 table.data {
 	clear:right;
-border-spacing:0;
+	border-spacing:0;
 	width: 100%; 
 	margin-left: auto; 
 	margin-right: auto;
-	font-size:11pt;
+	/* Armin 15.09.2010: replace static font-size 11pt with 115% */
+	font-size: 115%;
 } 
 
 table.data th {
@@ -650,7 +655,8 @@ table.data tbody th {
 	text-align: left;
 	background-color: #D5D5D5;
 	cursor: auto;
-	font-size:8pt;
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font-size: 82%;
 	color:#4D4D4D;
 }
 
@@ -692,7 +698,7 @@ table.data.static tfoot td, table.data.static tfoot tr:first-child td {
 
 /*buttons*/
 table.data tfoot input {
-background-color: #3866C4;
+	background-color: #3866C4;
 	border:  #153877  solid 1px;
 	font-weight:bold;
 	color:#fff;
@@ -746,12 +752,14 @@ div#error {
 	background-color: #FFFBD9;
 	padding-left: 25px;
 	font-weight: bold;
-	font-size:11pt;
+	/* Armin 15.09.2010: replace static font-size 11pt with 115% */
+	font-size: 115%;
 }
 div#error h4 {
 	color: black;
 	margin-left: 0px;
-	font-size:9pt;
+	/* Armin 15.09.2010: replace static font-size 9pt with 90% */
+	font-size: 90%;
 }
 
 div#error ul, div#feedback ul, div#help ul {
@@ -774,7 +782,8 @@ div#feedback {
 	color: #333;
 	font-weight: normal;
 	background-color:#FFFBD9;
-	font-size:11pt;
+	/* Armin 15.09.2010: replace static font-size 11pt with 115% */
+	font-size: 115%;
 }
 
 div#help {
@@ -1023,7 +1032,8 @@ text-decoration:underline;
 }
 
 h4.box {
-	font-size:8pt;
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font-size: 82%;
 	padding: 2px;
 	font-weight:bold;
 /* Armin 01.09.2010: image does not exist so don't call it to reduce error messages' */
@@ -1049,7 +1059,8 @@ div.box {
 	padding: 5px;
 	background-color:fff;
 	color: black;
-	font-size:8.5pt;
+	/* Armin 15.09.2010: replace static font-size 8.5pt with 85% */
+	font-size: 85%;
 	font-weight: normal;
 	border-right-width: 1px;
 	border-bottom-width: 1px;
@@ -1249,7 +1260,8 @@ div#content-text {
 	line-height:1.4em;
 	list-style:disc;
 	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:11.5pt /*leave me alone please - joel*/;
+	/* Armin 15.09.2010: replace static font-size 11.5pt with 120% */
+	font-size: 120% /*leave me alone please - joel*/;
 }
 
 /*#content-text ul{
@@ -1522,8 +1534,9 @@ div.social-left{
 
 }
 #contentcolumn h3  {
-	font-size:12pt;
-margin-bottom:8pt;
+	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
+	font-size: 125%;
+	margin-bottom:8pt;
 	font-family: Arial, Helvetica, sans-serif;
 	margin-top:16pt;
 	color:#000;
@@ -1614,10 +1627,10 @@ ul#topnavlist {
 	margin-top: 0px;
 	
 	margin-left:0;
-	font-size:8pt;
-	
-	
+	/* Armin 15.09.2010: Fixed fontsize influences a11y feature, trying % instead */
+	font-size: 82%;
 }
+
 div#topnavlistcontainer
 ul#topnavlist li {
 	list-style-type: none !important;
@@ -1726,7 +1739,7 @@ div.browse-course {
 	padding-bottom: 10px;
 	background-color: #fffaf0;
 	border:1px #6F7172 solid;
-	font-size:9pt;
+	font-size:90%;
 	min-height:18em;
 	margin:auto;
 	margin-left:1em;
@@ -2065,7 +2078,8 @@ div.home_box {
 	background-repeat:no-repeat;
 }
 .home-title{
-	font-size:12pt;
+	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
+	font-size: 125%;
 }
 .buttonbox{
 	float:right;
@@ -2169,8 +2183,14 @@ border:1px solid #cccccc;
 
 /* ---------- added stuff  -------- */
 
-#advanced-search {float: right; margin-right:12.5em; margin-top:10px; 
-font-size:7pt; font-weight:normal;}
+#advanced-search {
+	float: right; 
+	margin-right:12.5em; 
+	margin-top:10px;
+	/* Armin 15.09.2010: replace static font-size 7pt with 73% */
+	font-size: 73%;
+	font-weight:normal;
+}
 
 #advanced-search a {text-decoration:underline;
 color:#5984C4;
@@ -2186,7 +2206,8 @@ font-weight:normal;}
 ul#subnavlist, #subnavlist .active { /* general settings */
 text-align: left; /* set to left, right or center */
 margin: 1em 0 2em 0; /* set margins as desired */
-font:  8pt helvetica, arial, sans-serif; /* set font as desired */
+/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+font:  82% helvetica, arial, sans-serif; /* set font as desired */
 border-bottom: 3px solid #5984C4; /* set border COLOR as desired */
 list-style-type: none;
 padding: 3px 10px 0 0; /* THIRD number must change with respect to padding-top (X) below */
@@ -2219,7 +2240,8 @@ color: #000; /* set unselected tab link color as desired */
 margin-right: 0px; /* set additional spacing between tabs as desired */
 text-decoration: none;
 border-bottom: none;
-font-size:8pt; 
+/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+font-size: 82%; 
 }
 
 ul#subnavlist a:hover { /* settings for hover effect */
@@ -2247,18 +2269,21 @@ font-weight:bold;
 .site-name {	font-family: Arial, Helvetica, sans-serif;
 font-weight:bold;
 color:#5984C4;
-font-size:12pt;
+/* Armin 15.09.2010: allow a font-size that is flexible and changes with a11y settings by replacing 12pt with 125% */
+font-size:125%;
 margin:0;
 padding:0;}
 
 #course_title_container {margin-bottom:.5em;
 margin-left:4.4em !important;}
 
-h2#brand-tag {	font-family: Arial, Helvetica, sans-serif;
- 
-font-size:12pt;
-color:#86868B;
-margin-top:-2em;}
+h2#brand-tag {
+	font-family: Arial, Helvetica, sans-serif;
+	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
+	font-size: 125%;
+	color:#86868B;
+	margin-top:-2em;
+}
 
 
 #toc a:link, a.dimmed:link, a:link h2, a.dimmed:link h2 {
@@ -2320,7 +2345,8 @@ blockquote {
 	padding-right: 0;
 	padding-bottom: 0.5em;
 	padding-left: 0;
-	font-size:12pt;
+	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
+	font-size: 125%;
 	font-family: Arial, Helvetica, sans-serif;
 	margin-top:16pt;
 	font-weight:bold;
@@ -2386,7 +2412,8 @@ tr.odd {
 /* Content editor tabs */
 .editor_buttontab {
         color:#000000;
-        font-size:10pt;
+        /* Armin 15.09.2010: replace static font-size 10pt with 100% */
+        font-size: 100%;
         border:0;
         white-space: nowrap;
         background-color: #ffffff;
@@ -2451,7 +2478,8 @@ div.input-form {
 table.etabbed-table     {
         padding-left:0em;
         padding-right:5em;
-        font-size:10pt;
+        /* Armin 15.09.2010: replace static font-size 10pt with 100% */
+        font-size: 100%;
         width:90%;
         margin-left:0em;
         margin-right:auto;
@@ -2462,7 +2490,8 @@ table.etabbed-table     {
 }
 .prefs_buttontab {
         color:#000;
-        font-size:10pt !important;
+        /* Armin 15.09.2010: replace static font-size 10pt with 100% */
+        font-size: 100% !important;
         white-space: nowrap;
         margin: 0px;
         border:0;
@@ -2492,7 +2521,8 @@ background-color:#5984c4;
 	font-weight:bold;}
 .prefs_tab_selected{
 	text-align: center; /* set margins as desired */
-	font:  8pt helvetica, arial, sans-serif; /* set font as desired */
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font:  82% helvetica, arial, sans-serif; /* set font as desired */
 	list-style-type: none; /* THIRD number must change with respect to padding-top (X) below */
 	line-height:150%;
 	vertical-align:middle;
