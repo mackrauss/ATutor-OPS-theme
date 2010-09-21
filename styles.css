@@ -158,7 +158,7 @@ a.dropdown-title {
 	border:  #153877  solid 1px;
 	font-weight:bold;
 	color:#fff;
-
+	font-size: 100%;
 }
 .button:focus {
 	border:1px solid #A50707;
@@ -1228,10 +1228,11 @@ a#guide {
 /*CONTENT Styles*/
 /* Symon */
 div#content-text {
-	font-family:Georgia, "Times New Roman", Times, serif;
-	padding-right: 5pt;
+	/*font-family:Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
+	padding-right: 0.375em;
 	/*line-height:150%;*/
-	margin-left: 5px;
+	margin-left: 0.275em;
+	max-width: 100%;
 	width:80%;
 }
 
@@ -1259,7 +1260,7 @@ div#content-text {
 	padding:0;
 	line-height:1.4em;
 	list-style:disc;
-	font-family:Georgia, "Times New Roman", Times, serif;
+	/*font-family:Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
 	/* Armin 15.09.2010: replace static font-size 11.5pt with 120% */
 	font-size: 120% /*leave me alone please - joel*/;
 }
@@ -1334,6 +1335,11 @@ div#content-text {
 	background-color:#fff;
 	margin:0 0 0.8em 0;
 	padding:0 0 0 0;
+	
+	width:100%;
+	height:300px;
+	
+	text-align:left;
 }
 
 #content-text sub{ /*Custom text to describe media content*/
@@ -1388,9 +1394,6 @@ div#
 	border:0;
 	width: 95%;
 }
-
-
-
 
 /* login page */
 div.column {
@@ -1526,11 +1529,11 @@ div.social-left{
     /* Armin */
     float: left;
     /* Armin end */
-    overflow:hidden;
+/*    overflow:hidden;*/
     max-width:80%;
 	/* j */
 	width:60%;
-	margin-left:2.2em;
+	margin-left: 1em;
 
 }
 #contentcolumn h3  {
@@ -1549,12 +1552,13 @@ div.social-left{
 #leftcolumn{
 	float: left;
 	margin-top: 2em;
-	margin-left: 2.2em;
+	margin-left: 2em;
 	/*margin-right: 2em;*/
 	margin-bottom:0px;
-	width:23em;
+	width: 32%;
+	max-width: 33%;
 	white-space:normal;
-	padding-right:2%;
+	padding-right: 1%;
 }
 
 #footer{
@@ -1661,7 +1665,8 @@ ul#topnavlist li a {
     color: #000;
 	font-weight:normal;
     height: 1.5em;
-    padding: 0em 2em 0em;
+	/* Armin 21.09.2010: change padding a bit to squezze in headers on 1024x768 and avoid wrapping */
+    padding: 0em 1.3em 0em;
    	text-decoration:none;
 	
 }
@@ -2333,7 +2338,7 @@ blockquote {
 	padding-bottom:1em;
 	border-top:solid 2px black;
 	border-bottom: solid 2px black;
-	font-family:Georgia, "Times New Roman", Times, serif;
+	/*font-family:Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
 	font-style:italic;
 }
 
@@ -2563,6 +2568,32 @@ background-color:#5984c4;
 #my_courses_container {padding-bottom:1em;}
 
 /* Armin 16.09.2010: section to change the wizard screen for user settings */
-.wizscreen {
+/* Symon 20.09.2010: adding some styles */
+.wizscreen div{
+	padding: 0 0 1em 0;
 }
 
+/* Symon 20.09.2010: adding some padding to the alternatives div */
+#alternatives_shortcuts{
+	padding:3em 0 1em 0;
+}
+
+ul#alternatives_shortcuts li {
+	list-style-type: none !important;
+/* 	display:box; */
+/*	float:left;*/
+	margin-left:0;
+/* 	padding-left:-100px; */
+/* 	line-height:250%; */
+/* 	vertical-align:center; */
+	
+	
+	/*white-space: nowrap;
+	list-style: none;
+	display: inline;
+	margin: 0px;*/
+}
+
+ul#alternatives_shortcuts li a img {
+	text-align: center;
+}
