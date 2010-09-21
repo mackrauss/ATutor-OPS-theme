@@ -25,7 +25,7 @@
 				<!-- COURSES! --><td>
 					<!-- Armin: changed call to course and point at first content element to start course right away -->
 					<!-- Harris and Armin 19.08.2010 pointing at first element in the tree now -->
-					<?php echo '<a href="'.url_rewrite('bounce.php?course=' . $row['course_id']).SEP. 'p='.urlencode('content.php?cid='.$cp_row['content_id']) . '"> '.htmlentities($row['title']).'</a>' ?>
+					<?php echo '<a href="'.url_rewrite('bounce.php?course=' . $row['course_id']).SEP. 'p='.urlencode('content.php?cid='.$cp_row['content_id']) . '"> '.htmlentities_utf8($row['title']).'</a>' ?>
 					<br />
 				</td>
                <!-- ACTIONS! --> <td> 
