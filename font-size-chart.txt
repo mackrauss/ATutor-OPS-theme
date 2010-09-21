@@ -1,0 +1,15 @@
+This is a conversion table for cad.atutor.ca using the ocadnew theme
+
+Baseline is 0.8em = 80% ~ 10pt
+
+ 7pt  73%
+ 8pt  82%
+8.5pt 85%	
+ 9pt  90%
+.5    95%
+10pt 100%
+11pt 115%
+.5pt 120%
+12pt 125%
+14pt 146%
+16pt 166%
