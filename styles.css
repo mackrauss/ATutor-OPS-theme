@@ -1246,7 +1246,8 @@ div#content-text {
 	line-height: 1.4em;
 	width: 14em;
 	font-style: italic;
-	color: #000;
+/* Armin 22.09.2010: Take out explicit color so that inverting works */
+/* 	color: #000; */
 	margin: 0.5em 1.5em 0.5em 0;
 	padding: 0.1em 0 0 0;
 	float: left;
@@ -2326,8 +2327,9 @@ margin-bottom:.7em;
 padding:.5em;}
 
 blockquote {
-	background-color:#FFFFFF;
-	color:#000000;
+/* Armin 22.09.2010: Take out explicit color so that inverting works */
+/* 	background-color:#FFFFFF; */
+/* 	color:#000000; */
 	float:left;
 	font-size:1.5em;
 	font-style:italic;
