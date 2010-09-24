@@ -108,16 +108,7 @@ global $system_courses, $_custom_css, $db;
 		<?php endif; ?> 
         
 		<?php if (isset($_SESSION['member_id']) && $_SESSION['member_id']): ?>
-			<?php if(!$this->just_social): ?>
-			<!-- start the jump menu -->
-			<?php if (empty($_GET)): ?>
-				<form method="post" action="<?php echo $this->base_path; ?>bounce.php?p=<?php echo urlencode($this->rel_url); ?>" target="_top">
-			<?php else: ?>
-				<form method="post" action="<?php echo $this->base_path; ?>bounce.php" target="_top">
-			<?php endif; ?>
-						<!-- /end the jump menu -->
-			<?php endif; ?>
-			
+
 			
 			<?php if ($_SESSION['is_super_admin']): ?>
 				<a href="<?php echo $this->base_path; ?>bounce.php?admin"><?php echo _AT('return_to_admin_area'); ?></a> 
