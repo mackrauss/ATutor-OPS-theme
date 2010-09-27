@@ -620,7 +620,8 @@ a#editor-link.on {
 /* for data tables */
 
 table.data {
-	clear:right;
+	/* Armin 27.09.2010: instead of adding another table.data rule set */
+	clear:left;
 	border-spacing:0;
 	width: 100%; 
 	margin-left: auto; 
@@ -662,6 +663,11 @@ table.data tbody th {
 
 table.data td {
 	padding: 3px;
+}
+
+/* Armin 27.09.2010: try to keep the table date reasonably sized */
+table.data tbody td {
+	font-size: 90%;
 }
 
 table.data tbody tr:hover {
@@ -1846,9 +1852,7 @@ margin-top:1em;
 #home-links{
 clear:left;
 }
-table.data {
-	clear:left;
-}
+
 div#menutoggle{
 	width:1em;
 
@@ -2576,15 +2580,22 @@ background-color:#5984c4;
 }
 
 /* Symon 20.09.2010: adding some padding to the alternatives div */
+ul#alternatives_shortcuts {
+	width: 32%;
+	font-size: 75%;
+	float: right;
+	padding: 0.25em;
+}
+
 #alternatives_shortcuts{
-	padding:3em 0 1em 0;
+/* 	padding:3em 0 1em 0; */
 }
 
 ul#alternatives_shortcuts li {
 	list-style-type: none !important;
 /* 	display:box; */
-/*	float:left;*/
-	margin-left:0;
+/* 	float: right; */
+/* 	margin-left:0; */
 /* 	padding-left:-100px; */
 /* 	line-height:250%; */
 /* 	vertical-align:center; */
@@ -2598,4 +2609,6 @@ ul#alternatives_shortcuts li {
 
 ul#alternatives_shortcuts li a img {
 	text-align: center;
+	width: 1.5em;
+	height: 1.5em;
 }
