@@ -25,7 +25,8 @@ global $msg;
         <div class="fl-force-right"><br /><a href="javascript:window.close()"><?php echo _AT('close'); ?></a></div>
         <a name="content"></a>
 
-        <img border="0" src="<?php echo $this->base_href; ?>images/color-swatch.png" width="44" height="44"/><h1><?php echo _AT('preferences') ?></h1>
+        <img border="0" src="<?php echo $this->base_href; ?>images/color-swatch.png" width="44" height="44"/>
+		<h1>Preferences wizard</h1>
         <?php $msg->printAll(); ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form" enctype="multipart/form-data">
