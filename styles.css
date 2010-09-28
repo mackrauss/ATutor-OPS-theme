@@ -12,9 +12,9 @@ body {
 }
 
 .page_wrapper{
-	
 	margin:auto;
-	background-color: #ffffff;
+/* 27.09.2010 Armin Take out to avoid white blocks in a black background page */
+/* 	background-color: #ffffff; */
 }
 
 p {
@@ -667,7 +667,7 @@ table.data td {
 
 /* Armin 27.09.2010: try to keep the table date reasonably sized */
 table.data tbody td {
-	font-size: 90%;
+	font-size: 100%;
 }
 
 table.data tbody tr:hover {
@@ -1339,12 +1339,12 @@ div#content-text {
 	}
 
 #content-text object{
-	background-color:#fff;
+/* 	background-color:#fff; */
 	margin:0 0 0.8em 0;
 	padding:0 0 0 0;
 	
 	width:100%;
-	height:300px;
+	height:30px;
 	
 	text-align:left;
 }
@@ -1949,7 +1949,7 @@ label.primary a{
 /* format of "Content in this section" on content page */
 /* Symon */
 #toc {
-	margin-top: -1em;
+/* 	margin-top: -1em; */
 	margin-right: 0;
 	margin-bottom: -1em;
 	margin-left: 0;
@@ -1990,11 +1990,6 @@ label.primary a{
 }
 /* Symon - added: font-weight, top padding to .h2, converted Px to Em END*/
 
-fieldset#toc {
-	margin: 0 0 -1em 0;
-	background-color: #e8eef7;
-	width:50%;
-}
 
 #side-menu{
     overflow:hidden;
@@ -2348,9 +2343,18 @@ blockquote {
 	font-style:italic;
 }
 
- #toc fieldset {margin:0; 
- padding-bottom:.75em;}
- #toc legend  {
+#toc fieldset {
+	margin:0; 
+	padding-bottom:.75em;
+}
+
+fieldset.toc {
+	margin: 0 0 -1em 0;
+	background-color: #e8eef7;
+	width:50%;
+}
+
+#toc legend  {
 	margin:0;
 	padding-top: 1em;
 	padding-right: 0;
@@ -2410,7 +2414,7 @@ tr.even {
 
 tr.odd {
     background-color: transparent;
-	font-size:1.2em;
+/* 	font-size:1.2em; */
 }
 
 /* Content editor wrapper div */
