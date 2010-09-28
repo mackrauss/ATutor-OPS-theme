@@ -48,7 +48,7 @@ if (!defined('AT_INCLUDE_PATH')) { exit; } ?>
   </li>
 <?php endif; // END OF has visual alternative?>
 <?php if ($this->has_sign_lang_alternative) :?>
-  </li>
+  <li>
 	<a href="<?php echo $_SERVER['PHP_SELF'].'?cid='.$this->cid.(($_GET['alternative'] == 2) ? '' : SEP.'alternative=2'); ?>">
     <img src="<?php echo AT_BASE_HREF; ?>images/<?php echo (($_GET['alternative'] == 2) ? 'pause.png' : 'sign_lang_alternative.png'); ?>" 
       alt="<?php echo (($_GET['alternative'] == 2) ? _AT('stop_apply_sign_lang_alternatives') : _AT('apply_sign_lang_alternatives')); ?>" 
