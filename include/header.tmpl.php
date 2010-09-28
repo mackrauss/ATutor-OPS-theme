@@ -100,15 +100,15 @@ global $system_courses, $_custom_css, $db;
 	endif; ?>
 	<div id="top-links"> <!-- top help/search/login links -->
 			<div id="top-links-text">
-            <?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): ?>
-<strong><?php echo get_display_name($_SESSION['member_id']); ?></strong> <span class="nav-break2">|</span> 
+         <?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): ?>
+			<strong><?php echo get_display_name($_SESSION['member_id']); ?></strong> <span class="nav-break2">|</span>
+<!-- 			<a href="">xxx</a> <span class="nav-break2">|</span>  -->
 			<a href="<?php echo $this->base_path; ?>logout.php"><?php echo _AT('logout'); ?></a> <span class="nav-break2">|</span>
 		<?php else: ?>
 			 <a href="<?php echo $this->base_path; ?>login.php?course=<?php echo $this->course_id; ?>"><?php echo _AT('login'); ?></a>  <a href="<?php echo $this->base_path; ?>registration.php"><?php echo _AT('register'); ?></a>
 		<?php endif; ?> 
         
 		<?php if (isset($_SESSION['member_id']) && $_SESSION['member_id']): ?>
-
 			
 			<?php if ($_SESSION['is_super_admin']): ?>
 				<a href="<?php echo $this->base_path; ?>bounce.php?admin"><?php echo _AT('return_to_admin_area'); ?></a> 
@@ -184,7 +184,7 @@ global $system_courses, $_custom_css, $db;
 		<?php $path_parts = explode("/", $this->current_top_level_page); 
 		      $last_path_part = $path_parts[sizeof($path_parts) - 1];
                if (!admin_authenticate(AT_ADMIN_PRIV_ADMIN, AT_PRIV_RETURN) && $last_path_part != 'preferences.php') {?>
-		    <a class="pref_wiz_launcher"><img border="0" alt="<?php echo _AT('preferences').' - '._AT('new_window'); ?>" src="<?php echo $this->img; ?>color-swatch.png"> Preferences Wizard </a> <?php } ?> </li> 
+		    <a class="pref_wiz_launcher"><img border="0" alt="<?php echo _AT('preferences').' - '._AT('new_window'); ?>" src="<?php echo $this->img; ?>color-swatch.png"> Preferences wizard </a> <?php } ?> </li> 
 	</ul>
     <div id="topnav-search">
 	
@@ -195,10 +195,10 @@ global $system_courses, $_custom_css, $db;
 <input type="hidden" name="display_as" value="pages" />
 <input type="hidden" name="search_within[]" value="content" />
 <input type="hidden" name="search_within[]" value="forums" />
-<label for="words" style="display:none;">Search</label>
+<label for="words" style="display:none;"> <?php echo _AT('Search') ?> </label>
 <input type="text" name="words" class="formfield" size="20" id="words" value="" />
 
-<input type="submit" name="submit" value="Search" class="button" />
+<input type="submit" name="submit" value="<?php echo _AT('Search') ?>" class="button" />
 </form>
 
 
