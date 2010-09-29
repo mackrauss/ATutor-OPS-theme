@@ -159,13 +159,15 @@ global $system_courses, $_custom_css, $db;
 	<ul id="topnavlist">
 		<?php $accesscounter = 0; //initialize ?>
 		<?php foreach ($this->top_level_pages as $page): ?>
+			<!-- Armin 29.09.2010: construct img path -->
+			<?php $img_url = str_replace('/atutor', '', url_rewrite($page['url'])); ?>
 			<?php ++$accesscounter; $accesscounter = ($accesscounter == 10 ? 0 : $accesscounter); ?>
 			<?php $accesskey_text = ($accesscounter < 10 ? 'accesskey="'.$accesscounter.'"' : ''); ?>
 			<?php $accesskey_title = ($accesscounter < 10 ? ' Alt+'.$accesscounter : ''); ?>
 			<?php if ($page['url'] == $this->current_top_level_page): ?>
 				<li>
 					<a href="<?php echo $page['url']; ?>" <?php echo $accesskey_text; ?> title="<?php echo $page['title'] . $accesskey_title; ?>" class="active">
-						<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$page['url']]; ?>" alt="Picture of <?php echo $page['title']; ?>">
+						<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$img_url]; ?>" alt="Picture of <?php echo $page['title']; ?>">
 						<?php echo $page['title']; ?>
 					</a>
 					<span class="nav-break">|</span>
@@ -173,7 +175,7 @@ global $system_courses, $_custom_css, $db;
 			<?php else: ?>
 				<li>
 					<a href="<?php echo $page['url']; ?>" <?php echo $accesskey_text; ?> title="<?php echo $page['title'] . $accesskey_title; ?>">
-						<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$page['url']]; ?>" alt="Picture of <?php echo $page['title']; ?>">
+						<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$img_url]; ?>" alt="Picture of <?php echo $page['title']; ?>">
 						<?php echo $page['title']; ?>
 					</a> <span class="nav-break">|</span>
 				</li>
