@@ -154,13 +154,15 @@ global $system_courses, $_custom_css, $db;
 <!-- Armin: Import ocad_images.inc.php which maps navigation items to picture locations -->
 <?php 
     include('ocad_images.inc.php');
+
 ?>
 <!-- the main navigation. in our case, tabs -->
 	<ul id="topnavlist">
 		<?php $accesscounter = 0; //initialize ?>
 		<?php foreach ($this->top_level_pages as $page): ?>
 			<!-- Armin 29.09.2010: construct img path -->
-			<?php $img_url = str_replace('/atutor', '', url_rewrite($page['url'])); ?>
+			<?php $img_url = str_replace($this->base_path, '', url_rewrite($page['url'])); ?>
+
 			<?php ++$accesscounter; $accesscounter = ($accesscounter == 10 ? 0 : $accesscounter); ?>
 			<?php $accesskey_text = ($accesscounter < 10 ? 'accesskey="'.$accesscounter.'"' : ''); ?>
 			<?php $accesskey_title = ($accesscounter < 10 ? ' Alt+'.$accesscounter : ''); ?>
