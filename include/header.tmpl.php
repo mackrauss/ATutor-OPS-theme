@@ -160,8 +160,16 @@ global $system_courses, $_custom_css, $db;
 	<ul id="topnavlist">
 		<?php $accesscounter = 0; //initialize ?>
 		<?php foreach ($this->top_level_pages as $page): ?>
-			<!-- Armin 29.09.2010: construct img path -->
-			<?php $img_url = str_replace($this->base_path, '', url_rewrite($page['url'])); ?>
+			<!-- Armin 29.09.2010: construct img path -->			
+			<!-- Armin 04.10.2010: If base_path is more than '/' we have to remove it from page['url'] in order to match against ocad_images -->
+			<?php if ($this->base_path == '/') {
+					  $img_url = url_rewrite($page['url']);
+					}
+					else {
+					  $img_url = str_replace($this->base_path, '', url_rewrite($page['url']));
+					  $img_url = '/' + $img_url;
+					  debug($img_url);
+					} ?>
 
 			<?php ++$accesscounter; $accesscounter = ($accesscounter == 10 ? 0 : $accesscounter); ?>
 			<?php $accesskey_text = ($accesscounter < 10 ? 'accesskey="'.$accesscounter.'"' : ''); ?>
