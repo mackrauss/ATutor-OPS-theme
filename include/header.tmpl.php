@@ -167,9 +167,8 @@ global $system_courses, $_custom_css, $db;
 					}
 					else {
 					  $img_url = str_replace($this->base_path, '', url_rewrite($page['url']));
-					  $img_url = '/' + $img_url;
-					  debug($img_url);
-					} ?>
+					  $img_url = "/".$img_url;
+					} ?>		
 
 			<?php ++$accesscounter; $accesscounter = ($accesscounter == 10 ? 0 : $accesscounter); ?>
 			<?php $accesskey_text = ($accesscounter < 10 ? 'accesskey="'.$accesscounter.'"' : ''); ?>
