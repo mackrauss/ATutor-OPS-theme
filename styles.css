@@ -5,7 +5,8 @@ shtml,body{
 
 /* main body attributes */
 body {
-	font-family: Arial, Helvetica, sans-serif;
+/* 	font-family: Arial, Helvetica, sans-serif; */
+	font-family: Verdana, Helvetica, Arial, sans-serif;
 	margin:0px;
 	margin-top: -10px;
 	font-size: .8em;
@@ -451,10 +452,6 @@ table.tabbed-table th.selected {
 table.tabbed-table a, table.tabbed-table a:visited, table.tabbed-table a:hover {
 	color: black;
 	text-decoration: none;
-}
-/* Preferences tabs */
-table.etabbed-table	{
-	width: 90%;
 }
 
 a#my-start-page {
@@ -2490,6 +2487,7 @@ div.input-form {
     text-align: center;
 }
 
+/* Preferences tabs */
 table.etabbed-table     {
         padding-left:0em;
         padding-right:5em;
@@ -2499,6 +2497,44 @@ table.etabbed-table     {
         margin-left:0em;
         margin-right:auto;
 }
+
+/* Armin 04.10.2010: etabbed-table is now etabbed-list */
+ul.etabbed-list, .prefs_tab_selected {
+	list-style-type:none;
+	display: inline;
+	
+	text-align:left;
+	vertical-align:middle;
+	margin:1em 0 2em;
+	padding:3px 10px 0 0;
+
+/* 	border-bottom:3px solid #5984C4; 	 */
+}
+
+ul.subnavlist, .prefs_tab_selected, input.prefs_buttontab {
+	font:82%/150% helvetica,arial,sans-serif;
+	background-color:#F3F6FA;
+}
+
+ul.subnavlist, .prefs_tab {
+	list-style-type:none;
+	display: inline;
+
+	text-align:left;
+	vertical-align:middle;
+	margin:1em 0 2em;
+	padding:3px 10px 0 0;
+
+/* 	border-bottom:3px solid #5984C4; */
+}
+
+ul.subnavlist, .prefs_tab, input.prefs_buttontab {
+	font:82%/150% helvetica,arial,sans-serif;
+	background-color:#F3F6FA;
+}
+
+/* Armin 04.10.2010: End */
+
 .prefs-tab-spacer {
         background-color: transparent;
         width: 5px;
