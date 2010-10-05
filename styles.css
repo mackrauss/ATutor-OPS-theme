@@ -1139,6 +1139,12 @@ div.box .odd {
     background-color: transparent;
 }
 
+div.box a:link .del-content-icon {
+	background-color: red;
+	height: 10px;
+	width: 10px;
+}
+
 
 /* users/index.php */
 
@@ -1342,7 +1348,7 @@ div#content-text {
 	
 	width:100%;
 	height:300px;
-	
+	float:left;
 	text-align:left;
 }
 
