@@ -146,7 +146,7 @@
 
 <!-- Browse Courses -->
 <div class="current_container">
-	<h2 class="page-title">Browse Courses</h2>
+	<h2 class="page-title"><?php echo _AT('Browse Courses'); ?></h2>
 	<div class="current_box">
 		<form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">						
 	
