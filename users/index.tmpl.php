@@ -145,6 +145,7 @@
 <!-- End of recent activity -->
 
 <!-- Browse Courses -->
+<!-- Armin 13.10.2010: Removed Browse courses
 <div class="current_container">
 	<h2 class="page-title"><?php echo _AT('Browse Courses'); ?></h2>
 	<div class="current_box">
@@ -164,6 +165,7 @@
 			
 		</form>
 </div>
+-->
 <!-- End: Browse Courses -->
 
 <?php require(AT_INCLUDE_PATH.'footer.inc.php'); ?>
