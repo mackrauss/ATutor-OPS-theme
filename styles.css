@@ -1106,6 +1106,11 @@ div.box a:hover {
 	text-decoration: underline;
 }
 
+/* Armin 13.10.2010: Highlight the selected element in table of content */
+div.box strong a:visited {
+	color: blue;
+}
+
 .boxDetails {
     text-align: right;
 }
