@@ -1535,7 +1535,8 @@ div.social-left{
     /* Armin */
     /*float: left;*/
     /* Armin end */
-    width:90%;
+    width:97%;
+	max-width:100%;
     padding-top:0;
     padding-left:2.2em;
 }
@@ -1546,7 +1547,7 @@ div.social-left{
 /*    overflow:hidden;*/
     max-width:80%;
 	/* j */
-	width:60%;
+	width:61%;
 	margin-left: 1em;
 
 }
@@ -2664,4 +2665,8 @@ ul#alternatives_shortcuts li a img {
 	height: 1.5em;
 }
 
-/* Armin 30.09.2010: Add section to handle changed HTML items in Admin */
+/* Armin 18.10.2010: emphazise browse link in feedback */
+div#info a{
+	color:red;
+	text-decoration:underline;
+}
