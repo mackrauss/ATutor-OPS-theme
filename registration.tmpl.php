@@ -77,7 +77,8 @@ require(AT_INCLUDE_PATH.'header.inc.php');
 						<input name="member_id" type="hidden" value="<?php echo intval($_POST['member_id']); ?>" />
 						<input name="login" type="hidden" value="<?php echo stripslashes(htmlspecialchars($_POST['login'])); ?>" />
 				<?php else: ?>
-					<input id="login" name="login" type="text" maxlength="20" size="30" value="<?php echo stripslashes(htmlspecialchars($_POST['login'])); ?>" /><br />
+					<!-- Armin 18.10.2010: add hint to also as title -->
+					<input id="login" name="login" type="text" maxlength="20" size="30" value="<?php echo stripslashes(htmlspecialchars($_POST['login'])); ?>" title="<?php echo _AT('login_name').': '._AT('contain_only').' - '._AT('20_max_chars') ?>" /><br />
 					<small>&middot; <?php echo _AT('contain_only'); ?><br />
 						   &middot; <?php echo _AT('20_max_chars'); ?></small>
 				<?php endif; ?>
@@ -89,7 +90,8 @@ require(AT_INCLUDE_PATH.'header.inc.php');
 						<label for="form_password1"><?php echo _AT('password'); ?></label>
 					</span>
 					<br />
-					<input id="form_password1" name="form_password1" type="password" size="15" maxlength="15" /><br />
+					<!-- Armin 18.10.2010: add hint to also as title -->
+					<input id="form_password1" name="form_password1" type="password" size="15" maxlength="15" title="<?php echo _AT('password').': '._AT('combination').' - '._AT('15_max_chars') ?>" /><br />
 					<small>&middot; <?php echo _AT('combination'); ?><br />
 						   &middot; <?php echo _AT('15_max_chars'); ?></small>
 				</div>
