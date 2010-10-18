@@ -99,7 +99,12 @@
 			// Armin end
 
 			// Armin 19.08.2010: Only show n items with now ability to switch pages
-			$perpage = $max_news;
+			if (count($this->all_news) < $max_news) {
+				$perpage = count($this->all_news) - 1;
+			}
+			else {
+				$perpage = $max_news;
+			}
 			$newscount = $max_news;
 
 			if ($perpage != 0)
@@ -110,20 +115,25 @@
 			$end = ($p*$perpage);
 
 			// Armin 19.08.2010 Do not print the page changer anymore
-			//print_paginator($page, $num_pages, '', 1); 
-			for($i=$start;$i<=$end; $i++){
-				$count = $i;
-				if (isset($this->all_news)) {
-					echo '<ul class="recent_item">';
-					if(isset($this->all_news[$i]['thumb'])){
-						echo '<li"><img src="'.$this->all_news[$i]['thumb'].'" alt="'.$this->all_news[$i]['alt'].'" title="'.$this->all_news[$i]['alt'].'"/> ' . $this->all_news[$i]['link'] .' <br />';
-						if($this->all_news[$i]['object']['course_id']){
-						echo '<small>(<a href="bounce.php?course='.$this->all_news[$i]['object']['course_id'].'">'.$this->all_news[$i]['course'].'</a>)|';
+			//print_paginator($page, $num_pages, '', 1);
+			if (isset($this->all_news) && count($this->all_news) > 0) {
+				for($i=$start;$i<=$end; $i++){
+					$count = $i;
+					if (isset($this->all_news) && count($this->all_news) > 0) {
+						echo '<ul class="recent_item">';
+						if(isset($this->all_news[$i]['thumb'])){
+							echo '<li"><img src="'.$this->all_news[$i]['thumb'].'" alt="'.$this->all_news[$i]['alt'].'" title="'.$this->all_news[$i]['alt'].'"/> ' . $this->all_news[$i]['link'] .' <br />';
+							if($this->all_news[$i]['object']['course_id']){
+							echo '<small>(<a href="bounce.php?course='.$this->all_news[$i]['object']['course_id'].'">'.$this->all_news[$i]['course'].'</a>)|';
+							}
+							echo '('.AT_DATE('%F %j, %g:%i',$this->all_news[$i]['time']).')</small></li>';
 						}
-						echo '('.AT_DATE('%F %j, %g:%i',$this->all_news[$i]['time']).')</small></li>';
+						echo '</ul>';
 					}
-					echo '</ul>';
 				}
+			}
+			else {
+				echo _AT('none_found');
 			}
 			?>
 <!-- Armin 19.08.2010 Not toggling link -->
