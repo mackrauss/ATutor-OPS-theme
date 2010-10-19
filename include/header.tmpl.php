@@ -87,178 +87,169 @@ global $system_courses, $_custom_css, $db;
 </head>
 <body onload="<?php echo $this->onload; ?>">
 <div class="page_wrapper">
-<div id="header">
-	<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#content" accesskey="c">
-	<img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_content'); ?> ALT+c" /></a>		
+	<div id="header">
+		<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#content" accesskey="c">
+		<img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_content'); ?> ALT+c" /></a>		
 
-	<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#menu<?php echo htmlentities_utf8($_REQUEST['cid']); ?>"  accesskey="m"><img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_menu'); ?> ALT+m" /></a>
-	
-	<?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): 
-		echo '<div class="site-name">'.stripslashes(SITE_NAME).'</div>'; 
-	else:
-		echo '<br />';	
-	endif; ?>
-	<div id="top-links"> <!-- top help/search/login links -->
-			<div id="top-links-text">
-         <?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): ?>
-			<strong><?php echo get_display_name($_SESSION['member_id']); ?></strong> <span class="nav-break2">|</span>
-<!-- 			<a href="">xxx</a> <span class="nav-break2">|</span>  -->
-			<a href="<?php echo $this->base_path; ?>logout.php"><?php echo _AT('logout'); ?></a> <span class="nav-break2">|</span>
-		<?php else: ?>
-			 <a href="<?php echo $this->base_path; ?>login.php?course=<?php echo $this->course_id; ?>"><?php echo _AT('login'); ?></a>  <a href="<?php echo $this->base_path; ?>registration.php"><?php echo _AT('register'); ?></a>
-		<?php endif; ?> 
-        
-		<?php if (isset($_SESSION['member_id']) && $_SESSION['member_id']): ?>
-			
-			<?php if ($_SESSION['is_super_admin']): ?>
-				<a href="<?php echo $this->base_path; ?>bounce.php?admin"><?php echo _AT('return_to_admin_area'); ?></a> 
-			<?php endif; ?>
-
-			<?php if ($this->course_id > -1): ?>
-				<?php if (get_num_new_messages()): ?>
-					<a href="<?php echo $this->base_path; ?>inbox/index.php"><?php echo _AT('inbox'); ?> (<?php echo get_num_new_messages(); ?>)</a>  
-				<?php else: ?>
-					<a href="<?php echo $this->base_path; ?>inbox/index.php"><?php echo _AT('inbox'); ?></a>
-				<?php endif; ?><span class="nav-break2">|</span>
-			<?php endif; ?>
-		<?php endif; ?>
-		<?php if(!$this->just_social): ?>
-			<a href="<?php echo $this->base_path; ?>search.php"><?php echo _AT('search'); ?></a> <span class="nav-break2">|</span>
-		<?php endif; ?>
-		<a href="<?php echo $this->base_path; ?>help/index.php"><?php echo _AT('help'); ?></a>
-		</div>
-
-	</div>
-	<?php // if (!empty($this->icon)) { // if a course icon is available, display it here.  ?>
-		<!--<a href="<?php echo $this->base_path.url_rewrite('index.php'); ?>"><img src="<?php echo $this->icon; ?>" class="headicon" alt="<?php echo  _AT('home'); ?>" /></a>	 -->
-	<?php // } ?>
-
-	<?php
-	// If there is a custom course banner in the file manager called banner.html, display it here
-	@readfile(AT_CONTENT_DIR . $this->course_id.'/banner.html'); 
-
-	/*
-	and example banner.html file might look like:
-	<div style="width: 760px; height: 42px; background: white;"><img src="http://[mysite]/atutor15rc3/banners/kart-camb.jpg"></div>
-	*/
-
-	?>
-	<!-- section title -->
-
-	
-
-
-</div>
-
-<div id="topnavlistcontainer">
-<!-- Armin: Import ocad_images.inc.php which maps navigation items to picture locations -->
-<?php 
-    include('ocad_images.inc.php');
-
-?>
-<!-- the main navigation. in our case, tabs -->
-	<ul id="topnavlist">
-		<?php $accesscounter = 0; //initialize ?>
-		<?php foreach ($this->top_level_pages as $page): ?>
-			<!-- Armin 29.09.2010: construct img path -->			
-			<!-- Armin 04.10.2010: If base_path is more than '/' we have to remove it from page['url'] in order to match against ocad_images -->
-			<?php if ($this->base_path == '/') {
-					  $img_url = url_rewrite($page['url']);
-					}
-					else {
-					  $img_url = str_replace($this->base_path, '', url_rewrite($page['url']));
-					  $img_url = "/".$img_url;
-					} ?>		
-
-			<?php ++$accesscounter; $accesscounter = ($accesscounter == 10 ? 0 : $accesscounter); ?>
-			<?php $accesskey_text = ($accesscounter < 10 ? 'accesskey="'.$accesscounter.'"' : ''); ?>
-			<?php $accesskey_title = ($accesscounter < 10 ? ' Alt+'.$accesscounter : ''); ?>
-			<?php if ($page['url'] == $this->current_top_level_page): ?>
-				<li>
-					<a href="<?php echo $page['url']; ?>" <?php echo $accesskey_text; ?> title="<?php echo $page['title'] . $accesskey_title; ?>" class="active">
-						<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$img_url]; ?>" alt="Picture of <?php echo $page['title']; ?>">
-						<?php echo $page['title']; ?>
-					</a>
-					<span class="nav-break">|</span>
-				</li>
-			<?php else: ?>
-				<li>
-					<a href="<?php echo $page['url']; ?>" <?php echo $accesskey_text; ?> title="<?php echo $page['title'] . $accesskey_title; ?>">
-						<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$img_url]; ?>" alt="Picture of <?php echo $page['title']; ?>">
-						<?php echo $page['title']; ?>
-					</a> <span class="nav-break">|</span>
-				</li>
-			<?php endif; ?>
-			<?php $accesscounter = ($accesscounter == 0 ? 11 : $accesscounter); ?>
-		<?php endforeach; ?>
-        <li>  
-		<?php $path_parts = explode("/", $this->current_top_level_page); 
-		      $last_path_part = $path_parts[sizeof($path_parts) - 1];
-               if (!admin_authenticate(AT_ADMIN_PRIV_ADMIN, AT_PRIV_RETURN) && $last_path_part != 'preferences.php') {?>
-		    <a class="pref_wiz_launcher"><img border="0" alt="<?php echo _AT('preferences').' - '._AT('new_window'); ?>" src="<?php echo $this->img; ?>color-swatch.png"> Preferences wizard </a> <?php } ?> </li> 
-	</ul>
-    <div id="topnav-search">
-	
-<form action="/search.php#search_results" method="get" name="searchform">
-<input type="hidden" name="search" value="1" />
-
-<input type="hidden" name="find_in" value="this" />
-<input type="hidden" name="display_as" value="pages" />
-<input type="hidden" name="search_within[]" value="content" />
-<input type="hidden" name="search_within[]" value="forums" />
-<label for="words" style="display:none;"> <?php echo _AT('Search') ?> </label>
-<input type="text" name="words" class="formfield" size="20" id="words" value="" />
-
-<input type="submit" name="submit" value="<?php echo _AT('Search') ?>" class="button" />
-</form>
-
-
-</div>
-<div class="clear"></div>
-</div>
-
-
-<div class="clear"></div>
-
-<div class="logoutbar">
-
-	<div>
+		<a href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>#menu<?php echo htmlentities_utf8($_REQUEST['cid']); ?>"  accesskey="m"><img src="<?php echo $this->base_path; ?>images/clr.gif" height="1" width="1" border="0" alt="<?php echo _AT('goto_menu'); ?> ALT+m" /></a>
 		
+		<div id="top-links"> <!-- top help/search/login links -->
+			<div id="top-links-text">
+				<?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): ?>
+					<strong><?php echo get_display_name($_SESSION['member_id']); ?></strong> <span class="nav-break2">|</span>
+		<!-- 			<a href="">xxx</a> <span class="nav-break2">|</span>  -->
+					<a href="<?php echo $this->base_path; ?>logout.php"><?php echo _AT('logout'); ?></a> <span class="nav-break2">|</span>
+				<?php else: ?>
+					<a href="<?php echo $this->base_path; ?>login.php?course=<?php echo $this->course_id; ?>"><?php echo _AT('login'); ?></a>  <a href="<?php echo $this->base_path; ?>registration.php"><?php echo _AT('register'); ?></a>
+				<?php endif; ?> 
+			
+				<?php if (isset($_SESSION['member_id']) && $_SESSION['member_id']): ?>
+					
+					<?php if ($_SESSION['is_super_admin']): ?>
+						<a href="<?php echo $this->base_path; ?>bounce.php?admin"><?php echo _AT('return_to_admin_area'); ?></a> 
+					<?php endif; ?>
+
+					<?php if ($this->course_id > -1): ?>
+						<?php if (get_num_new_messages()): ?>
+							<a href="<?php echo $this->base_path; ?>inbox/index.php"><?php echo _AT('inbox'); ?> (<?php echo get_num_new_messages(); ?>)</a>  
+						<?php else: ?>
+							<a href="<?php echo $this->base_path; ?>inbox/index.php"><?php echo _AT('inbox'); ?></a>
+						<?php endif; ?><span class="nav-break2">|</span>
+					<?php endif; ?>
+				<?php endif; ?>
+				<?php if(!$this->just_social): ?>
+					<a href="<?php echo $this->base_path; ?>search.php"><?php echo _AT('search'); ?></a> <span class="nav-break2">|</span>
+				<?php endif; ?>
+				<a href="<?php echo $this->base_path; ?>help/index.php"><?php echo _AT('help'); ?></a>
+			</div>
+		</div> <!-- End of top-links -->
+
+		<!-- Armin 19.10.2010: I pulled site-name below the top-links -->
+		<?php if (isset($_SESSION['valid_user']) && $_SESSION['valid_user']): 
+			echo '<div class="site-name">'.stripslashes(SITE_NAME).'</div>'; 
+		else:
+			echo '<br />';	
+		endif; ?>
+
+		<?php // if (!empty($this->icon)) { // if a course icon is available, display it here.  ?>
+			<!--<a href="<?php echo $this->base_path.url_rewrite('index.php'); ?>"><img src="<?php echo $this->icon; ?>" class="headicon" alt="<?php echo  _AT('home'); ?>" /></a>	 -->
+		<?php // } ?>
+
+		<?php
+		// If there is a custom course banner in the file manager called banner.html, display it here
+		@readfile(AT_CONTENT_DIR . $this->course_id.'/banner.html'); 
+
+		/*
+		and example banner.html file might look like:
+		<div style="width: 760px; height: 42px; background: white;"><img src="http://[mysite]/atutor15rc3/banners/kart-camb.jpg"></div>
+		*/
+
+		?>
+		<!-- section title -->
+	</div> <!-- page_wrapper -->
+
+	<div id="topnavlistcontainer">
+		<!-- Armin: Import ocad_images.inc.php which maps navigation items to picture locations -->
+		<?php 
+			include('ocad_images.inc.php');
+		?>
+		<!-- the main navigation. in our case, tabs -->
+		<ul id="topnavlist">
+			<?php $accesscounter = 0; //initialize ?>
+			<?php foreach ($this->top_level_pages as $page): ?>
+				<!-- Armin 29.09.2010: construct img path -->			
+				<!-- Armin 04.10.2010: If base_path is more than '/' we have to remove it from page['url'] in order to match against ocad_images -->
+				<?php if ($this->base_path == '/') {
+						  $img_url = url_rewrite($page['url']);
+						}
+						else {
+						  $img_url = str_replace($this->base_path, '', url_rewrite($page['url']));
+						  $img_url = "/".$img_url;
+						} ?>		
+
+				<?php ++$accesscounter; $accesscounter = ($accesscounter == 10 ? 0 : $accesscounter); ?>
+				<?php $accesskey_text = ($accesscounter < 10 ? 'accesskey="'.$accesscounter.'"' : ''); ?>
+				<?php $accesskey_title = ($accesscounter < 10 ? ' Alt+'.$accesscounter : ''); ?>
+				<?php if ($page['url'] == $this->current_top_level_page): ?>
+					<li>
+						<a href="<?php echo $page['url']; ?>" <?php echo $accesskey_text; ?> title="<?php echo $page['title'] . $accesskey_title; ?>" class="active">
+							<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$img_url]; ?>" alt="Picture of <?php echo $page['title']; ?>">
+							<?php echo $page['title']; ?>
+						</a>
+						<span class="nav-break">|</span>
+					</li>
+				<?php else: ?>
+					<li>
+						<a href="<?php echo $page['url']; ?>" <?php echo $accesskey_text; ?> title="<?php echo $page['title'] . $accesskey_title; ?>">
+							<img border="0" src="<?php echo $this->img; ?><?php echo $_ocad_images[$img_url]; ?>" alt="Picture of <?php echo $page['title']; ?>">
+							<?php echo $page['title']; ?>
+						</a> <span class="nav-break">|</span>
+					</li>
+				<?php endif; ?>
+				<?php $accesscounter = ($accesscounter == 0 ? 11 : $accesscounter); ?>
+			<?php endforeach; ?>
+			<li>  
+			<?php $path_parts = explode("/", $this->current_top_level_page); 
+				  $last_path_part = $path_parts[sizeof($path_parts) - 1];
+				  if (!admin_authenticate(AT_ADMIN_PRIV_ADMIN, AT_PRIV_RETURN) && $last_path_part != 'preferences.php') {?>
+				<a class="pref_wiz_launcher"><img border="0" alt="<?php echo _AT('preferences').' - '._AT('new_window'); ?>" src="<?php echo $this->img; ?>color-swatch.png"> Preferences wizard </a> <?php } ?> </li> 
+		</ul>
+		<div id="topnav-search">
+			<form action="/search.php#search_results" method="get" name="searchform">
+			<input type="hidden" name="search" value="1" />
+
+			<input type="hidden" name="find_in" value="this" />
+			<input type="hidden" name="display_as" value="pages" />
+			<input type="hidden" name="search_within[]" value="content" />
+			<input type="hidden" name="search_within[]" value="forums" />
+			<label for="words" style="display:none;"> <?php echo _AT('Search') ?> </label>
+			<input type="text" name="words" class="formfield" size="20" id="words" value="" />
+
+			<input type="submit" name="submit" value="<?php echo _AT('Search') ?>" class="button" />
+			</form>
+		</div>
+		<div class="clear"></div>
 	</div>
 
-</div>
+	<div class="clear"></div>
 
-<div class="crumbcontainer">
-	  <?php if (isset($_SESSION["prefs"]["PREF_SHOW_BREAD_CRUMBS"]) && $_SESSION["prefs"]["PREF_SHOW_BREAD_CRUMBS"]) { ?>
-		  <!-- the bread crumbs -->
-		  <div id="breadcrumbs">
-			  <?php foreach ($this->path as $page): ?>
-				  <a href="<?php echo $page['url']; ?>"><?php echo htmlspecialchars($page['title'], ENT_COMPAT, "UTF-8"); ?></a> > 
-			  <?php endforeach; ?> <?php echo $this->page_title; ?>
+	<div class="logoutbar">
+		<div>
+			
+		</div>
+	</div>
+
+	<div class="crumbcontainer">
+		  <?php if (isset($_SESSION["prefs"]["PREF_SHOW_BREAD_CRUMBS"]) && $_SESSION["prefs"]["PREF_SHOW_BREAD_CRUMBS"]) { ?>
+			  <!-- the bread crumbs -->
+			  <div id="breadcrumbs">
+				  <?php foreach ($this->path as $page): ?>
+					  <a href="<?php echo $page['url']; ?>"><?php echo htmlspecialchars($page['title'], ENT_COMPAT, "UTF-8"); ?></a> > 
+				  <?php endforeach; ?> <?php echo $this->page_title; ?>
+			  </div>
+		  <?php } ?>
+
+	<!-- Armin 10.09.2010: Enable shortcuts?? -->
+		  <?php if ($this->shortcuts): ?>
+		  <div id="shortcuts">
+			  <ul>
+				  <?php foreach ($this->shortcuts as $link): ?>
+					  <li><a href="<?php echo $link['url']; ?>"><!--<img src="<?php echo $link['icon']; ?>" alt="<?php echo $link['title']; ?>"  title="<?php echo $link['title']; ?>" class="shortcut_icon"/>--> <?php echo $link['title']; ?> </a></li>
+				  <?php endforeach; ?>
+			  </ul>
 		  </div>
-	  <?php } ?>
-
-<!-- Armin 10.09.2010: Enable shortcuts?? -->
-	  <?php if ($this->shortcuts): ?>
-      <div id="shortcuts">
-	      <ul>
-		      <?php foreach ($this->shortcuts as $link): ?>
-			      <li><a href="<?php echo $link['url']; ?>"><!--<img src="<?php echo $link['icon']; ?>" alt="<?php echo $link['title']; ?>"  title="<?php echo $link['title']; ?>" class="shortcut_icon"/>--> <?php echo $link['title']; ?> </a></li>
-		      <?php endforeach; ?>
-	      </ul>
-      </div>
-      <?php endif; ?>
-      </div>
+		  <?php endif; ?>
+	</div>
     
-</div>
-<div class="clear"></div>
+<!-- </div> -->
+	<div class="clear"></div>
 <!-- Course Title -->
 	<div id="course_title_container" <?php if(empty($this->icon)){echo ' style="left:1em;"';}   ?>>
-	<h1 id="section-title"><?php echo $this->section_title; ?>
-		<?php if ((isset($this->course_id) && $this->course_id > 0) && ($_SESSION['enroll'] == AT_ENROLL_NO)) : ?> 
-			- <small><a href="<?php echo $this->base_path; ?>enroll.php?course=<?php echo $this->course_id; ?>"><?php echo _AT('enroll_me'); ?></a></small>
-		<?php endif; ?>
-	</h1>
+		<h1 id="section-title"><?php echo $this->section_title; ?>
+			<?php if ((isset($this->course_id) && $this->course_id > 0) && ($_SESSION['enroll'] == AT_ENROLL_NO)) : ?> 
+				- <small><a href="<?php echo $this->base_path; ?>enroll.php?course=<?php echo $this->course_id; ?>"><?php echo _AT('enroll_me'); ?></a></small>
+			<?php endif; ?>
+		</h1>
 	</div>
 
 	<div id="contentwrapper" 
