@@ -50,7 +50,7 @@ if (!defined('AT_INCLUDE_PATH')) { exit; }
  */
 
 // will have to be moved to the header.inc.php
-global $system_courses, $_custom_css, $db;
+global $system_courses, $_custom_css, $db, $instructor;
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -189,10 +189,11 @@ global $system_courses, $_custom_css, $db;
 				<?php $accesscounter = ($accesscounter == 0 ? 11 : $accesscounter); ?>
 			<?php endforeach; ?>
 			<li>  
-			<?php $path_parts = explode("/", $this->current_top_level_page); 
+			  <?php $path_parts = explode("/", $this->current_top_level_page); 
 				  $last_path_part = $path_parts[sizeof($path_parts) - 1];
 				  if (!admin_authenticate(AT_ADMIN_PRIV_ADMIN, AT_PRIV_RETURN) && $last_path_part != 'preferences.php') {?>
-				<a class="pref_wiz_launcher"><img border="0" alt="<?php echo _AT('preferences').' - '._AT('new_window'); ?>" src="<?php echo $this->img; ?>color-swatch.png"> Preferences wizard </a> <?php } ?> </li> 
+				<a class="pref_wiz_launcher"><img border="0" alt="<?php echo _AT('preferences').' - '._AT('new_window'); ?>" src="<?php echo $this->img; ?>color-swatch.png"> Preferences wizard </a> <?php } ?>
+			</li> 
 		</ul>
 		<div id="topnav-search">
 			<form action="/search.php#search_results" method="get" name="searchform">
@@ -254,7 +255,7 @@ global $system_courses, $_custom_css, $db;
 
 	<div id="contentwrapper" 
 		<?php if ($_SESSION["prefs"]["PREF_SHOW_BREAD_CRUMBS"] == 0):
-			$style.='margin-top:-2em;';
+// 			$style.='margin-top:-2em;';
 			echo 'style="'.$style.'"';
 		endif; ?>>
 	<?php if (isset($this->course_id) && $this->course_id > 0 && $system_courses[$this->course_id]['side_menu']): ?>
@@ -300,28 +301,56 @@ global $system_courses, $_custom_css, $db;
 	</ul>
 </div> -->
 
-		<div id="subnavlistcontainer">
-		
+		<!-- Armin 21.10.2010: Determine user to surpress subnav bar on user/index.php if not instructor -->
+		<?php
+			// set instructor to true and set it to false if member has not status 3 (instructor)
+			$instructor = 1;
+			
+			// only do this if member_id is available
+			if (isset($_SESSION['member_id'])) {
+				// check if member is instructor (no result if no instructor)
+				$sql = 'SELECT 1 FROM AT_members WHERE member_id = '.$_SESSION['member_id'].' AND status = 3';
+				$result = mysql_query($sql, $db);
+				if ($result) {
+					$result_row = mysql_fetch_assoc($result);
+				}
+				// if result empty it is NOT a instructor
+				if (empty($result_row)) {
+				  $instructor = 0;
+				}
+			}
+		?>
+	  
+		<!-- Armin 20.10.2010: Do not show subnav if login.php or register.php -->
+		<?php if ($this->current_sub_level_page !== "/login.php" && /*$this->current_sub_level_page !== "/users/index.php" &&*/
+				  $this->current_sub_level_page !== "/registration.php" &&
+				  $this->current_sub_level_page !== "/password_reminder.php" &&
+				  // if instructor show subnav if not instructor and /user/index.php hide subnav
+				  ($instructor || $this->current_sub_level_page !== "/users/index.php")
+				  ): ?>
+			<div id="subnavlistcontainer">			
+				<ul id="subnavlist">
+				<?php $num_pages = count($this->sub_level_pages); ?>
 
-			<ul id="subnavlist">
-			<?php $num_pages = count($this->sub_level_pages); 
-
-?>
-			<?php for ($i=0; $i<$num_pages; $i++): ?>
-				
-				<?php if ($this->sub_level_pages[$i]['url'] == $this->current_sub_level_page): ?>
-				      <li class="active"><?php echo htmlentities_utf8($this->sub_level_pages[$i]['title']); ?></li>
-				<?php else: ?>
-					<li><a href="<?php echo $this->sub_level_pages[$i]['url']; ?>"><?php echo htmlentities_utf8($this->sub_level_pages[$i]['title']); ?></a></li>
-				<?php endif; ?>
-				<?php if ($i < $num_pages-1): 
-					echo " ";?>
-				<?php endif; ?>
-			<?php endfor; ?>
-			</ul>
-		</div>
+				<?php for ($i=0; $i<$num_pages; $i++): ?>
+					
+					<?php if ($this->sub_level_pages[$i]['url'] == $this->current_sub_level_page): ?>
+						  <li class="active"><?php echo htmlentities_utf8($this->sub_level_pages[$i]['title']); ?></li>
+					<?php else: ?>
+						<li><a href="<?php echo $this->sub_level_pages[$i]['url']; ?>"><?php echo htmlentities_utf8($this->sub_level_pages[$i]['title']); ?></a></li>
+					<?php endif; ?>
+					<?php if ($i < $num_pages-1): 
+						echo " ";?>
+					<?php endif; ?>
+				<?php endfor; ?>
+				</ul>			
+			</div>
+		<?php endif; ?>
+		<!-- Armin end -->
 	<?php endif; ?>
 
+	<!-- Armin 21.10.2010: Put messages above the page title to avoid squezing in ???  -->
+	<?php global $msg; $msg->printAll(); $_base_href;?>
 
 <!-- the page title -->
 	<a name="content" title="<?php echo _AT('content'); ?>"></a>
@@ -343,6 +372,6 @@ global $system_courses, $_custom_css, $db;
 		</div>
     
     
-	<?php global $msg; $msg->printAll(); $_base_href;?>
+	
 
 
