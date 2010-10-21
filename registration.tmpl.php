@@ -35,11 +35,18 @@ require(AT_INCLUDE_PATH.'header.inc.php');
 		<fieldset class="group_form">
 			<legend class="group_form"><?php echo _AT('required_information'); ?></legend>
 			<?php if (!$_POST['member_id'] && defined('AT_MASTER_LIST') && AT_MASTER_LIST && !admin_authenticate(AT_ADMIN_PRIV_USERS, TRUE)): ?>
-				<div class="row">
-					<h3><?php echo _AT('account_authorization'); ?></h3>
-				</div>
-		
-				<div class="row">
+				
+<!-- <div class="row"> Symon 19.10.2010 11:35P Symon: Removed 'div rows' and BR and replaced with LIST ELEMENTS -->
+<!-- I'll need to ask about this -->
+
+					<ul>
+                        <li>
+                        
+                            <h3><?php echo _AT('account_authorization'); ?></h3>
+                        
+                        </li>
+                    </ul>
+	
 					<span class="required" title="<?php echo _AT('required_field'); ?>">*
 						<label for="student_id"><?php echo _AT('student_id'); ?></label>
 					</span>
