@@ -4,28 +4,17 @@ shtml,body{
 
 /* main body attributes */
 body {
-/* 	font-family: Arial, Helvetica, sans-serif; */
 	font-family: Verdana, Helvetica, Arial, sans-serif;
-/* 19.10.2010 Symon - Removing PX
-/*	margin:0px;
-	margin-top: -10px;*/
-	
-/* 19.10.2010 11:51A Symon: Attempting to figure some global spacing solutions – SEE .PAGE_WRAPPER ALSO*/	
-/* 19.10.2010: Without global margins it seems ok */
-	margin: 0em;
+	margin: 0;
 	padding: 0;
 	width: 100%;
-	/*margin: -0.5em 0 0 0;*/
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .page_wrapper{
 /* 19.10.2010 11:49A Symon: Attempting to figure some global spacing solutions – SEE BODY ALSO*/	
-	margin: 0em;
+	margin: 0;
 	width: 100%;
-
-/* 27.09.2010 Armin Take out to avoid white blocks in a black background page */
-/* 	background-color: #ffffff; */
 }
 
 p {
@@ -551,7 +540,7 @@ div#shortcuts {
 
 h2.page-title {
 	clear:right;
-	margin-bottom: 10px;
+	margin-bottom: 0;
 	padding:0px;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
@@ -602,7 +591,7 @@ h1#section-title {
 	font-size: 146%;
 	color:#3866C4;
 	font-weight:bold;
-	margin-bottom:1em;
+	margin-bottom: 0.5em;
 }
 
 div#top-links {
@@ -728,6 +717,16 @@ table.data tbody tr.selected {
 	cursor: auto;
 }
 
+/* Armin 21.10.2010: Adding underlining for course list */
+table.data tbody tr td a {
+	text-decoration: underline;
+}
+
+table.data tbody tr td span a {
+	text-decoration: underline !important;
+}
+/* Armin 21.10.2010: End - Adding underlining for course list */
+
 table.data tfoot {
 	background-color: #D5D5D5;
 	padding: 3px;
@@ -830,9 +829,9 @@ div#error ul li{
 div#feedback {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	padding: 5px;
+	margin-top: 0.2em;
+	margin-bottom: 0.3em;
+	padding: 0.2em;
 	color: #333;
 	font-weight: normal;
 	background-color:#FFFBD9;
@@ -1698,20 +1697,30 @@ div#topnavlistcontainer {
 	border-left-color: #999;	
 }
 
-#topnavlist a:hover {color:#3866c4 !important;
-text-decoration:underline !important;
-background-color:transparent;
-
+#topnavlist a:hover {
+	color:#3866c4 !important;
+	text-decoration:underline !important;
+	background-color:transparent;
 }
-#topnavlist a.active {color:#3866c4 !important; background-color: transparent; font-weight:bold; text-decoration:none;}
+
+#topnavlist a.active {
+	color:#3866c4 !important;
+	background-color: transparent;
+	font-weight:bold;
+	text-decoration:none;
+}
 
 ul#topnavlist {
-	padding-top: 5px;
+	/*padding-top: 5px;
 	margin-top: 0px;
+	margin-left:0;*/
 	
-	margin-left:0;
 	/* Armin 15.09.2010: Fixed fontsize influences a11y feature, trying % instead */
 	font-size: 82%;
+	
+	/* 19.10.2010 7:08P Symon: Adjust the margin for global nav */
+	margin: 0;
+	padding: 0;
 }
 
 div#topnavlistcontainer
@@ -2025,6 +2034,8 @@ label.primary a{
 	margin-right: 0;
 	margin-bottom: -1em;
 	margin-left: 0;
+	width: 50%;
+	border: solid 1px white;
 }
 
 #toc a{
@@ -2385,10 +2396,10 @@ float:left;
 margin-right:10pt;}
 
 .recent_activity_container {
-width:50%;
-margin-bottom:30px;
-float:left;
-margin-right:1em;
+	width:50%;
+	margin-bottom: 2em;
+	float:left;
+	margin-right:1em;
 }
 
 .recent_activity_box a {font-weight:normal;} 
@@ -2429,7 +2440,7 @@ blockquote {
 fieldset.toc {
 	margin: 0 0 -1em 0;
 	background-color: #e8eef7;
-	width:50%;
+/* 	width:50%; */
 }
 
 #toc legend  {
@@ -2453,7 +2464,7 @@ fieldset.toc {
 	font-size: 0.8em;
 	
 	/* 19.10.2010 Symon: Better spacing for sequence links */
-	margin: 3em -0.7em 0 0;
+/* 	margin: 3em -0.7em 0 0; */
 	padding: 0;
 }
 
@@ -2691,21 +2702,23 @@ background-color:#5984c4;
 .begincourse {padding-right:2em;}
 
 .begincourse a:link {color:#000; text-decoration:none;}
-.begincourse a:hover {color:#000 !important; background-color:transparent; text-decoration:underline !important;}
+.begincourse a:hover {color:#000; background-color:transparent; text-decoration:underline !important;}
 .begincourse a:visited {color:#000; text-decoration:none;}
 
 .enrollme a:link {color:#00A715; text-decoration:none;}
-.enrollme a:hover {color:#00A715 !important; background-color:transparent; text-decoration:underline;}
+.enrollme a:hover {color:#00A715; background-color:transparent; text-decoration:underline !important;}
 .enrollme a:visited {color:#00A715; text-decoration:none;}
 
 .unenrollme a:link {color:#C1272D; text-decoration:none;}
-.unenrollme a:hover {color:#C1272D !important; background-color:transparent; text-decoration:underline;}
+.unenrollme a:hover {color:#C1272D; background-color:transparent; text-decoration:underline !important;}
 .unenrollme a:visited {color:#C1272D; text-decoration:none;}
 
 
 /* more misc */
 
-#my_courses_container {padding-bottom:1em;}
+#my_courses_container {
+	padding-bottom: 2.5em;
+}
 
 /* Armin 16.09.2010: section to change the wizard screen for user settings */
 /* Symon 20.09.2010: adding some styles */
