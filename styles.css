@@ -1400,12 +1400,13 @@ div#content-text {
 	border:none;
 	}
 
+/* 25.10.2010 3:47P Commented out FLOAT: LEFT, it was causing some problems with flowing text. */
 #content-text object{
 /* 	background-color:#fff; */
 	margin:0 0 0.8em 0;
 	padding:0 0 0 0;
 /* 	width:100%; */
-	float:left;
+	/*float:left;*/
 	text-align:left;
 }
 
@@ -1682,19 +1683,22 @@ div#topnavlistcontainer {
 	background-color: #F4F4F4;
 	margin-top:2em;
 	margin-bottom:1em;
-	padding-right:1.25em;
+	/*padding-right:1.25em;*/
 	border-top-width: 1px;
 	border-right-width: 0px;
 	border-bottom-width: 1px;
 	border-left-width: 0px;
 	border-top-style: solid;
-	border-right-style: none;
+	/*border-right-style: none;*/
 	border-bottom-style: solid;
-	border-left-style: none;
+	/*border-left-style: none;*/
 	border-top-color: #999;
-	border-right-color: #999;
+	/*border-right-color: #999;*/
 	border-bottom-color: #999;
-	border-left-color: #999;	
+	/*border-left-color: #999;*/
+	
+	/* 23.10.2010  10:14P Symon: Adjustment of the TOPNAV Spacing, looks better. */
+	Padding: 0.5em 1.25em 0.2em 1em;	
 }
 
 #topnavlist a:hover {
@@ -1723,7 +1727,8 @@ ul#topnavlist {
 	padding: 0;
 }
 
-div#topnavlistcontainer
+	/* 19.10.2010 10:20P Symon: Duplicate style? TESTED, Didn't break. */
+/*div#topnavlistcontainer*/
 ul#topnavlist li {
 	list-style-type: none !important;
 	display:box;
@@ -1736,6 +1741,16 @@ ul#topnavlist li {
 	list-style: none;
 	display: inline;
 	margin: 0px;*/
+}
+
+/* 19.10.2010 11:40P Symon: Hides the mobile youtube link from default web browser, can be found again in blackberry.css. */
+.hide_test {
+	visibility:hidden;
+	display:none; /* 25.10.2010 3:46P Symon: Apparently this hides the content from a screen reader, this avoids confusion */
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .nav-break {color:#666; }
@@ -2444,17 +2459,21 @@ fieldset.toc {
 }
 
 #toc legend  {
-	margin:0;
+	/*margin:0;
 	padding-top: 1em;
 	padding-right: 0;
 	padding-bottom: 0.5em;
-	padding-left: 0;
+	padding-left: 0;*/
 	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
 	font-size: 125%;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	margin-top:16pt;
+	/*margin-top:16pt;*/
 	font-weight:bold;
+	
+/* 25.10.2010 8:01P Symon: adjusts the TOC HEADER with a single value */ 	
+	margin:0;
+	padding:2em 0 0 0;
 }
 
 /*.sequence-links { border: thin solid green;}*/
@@ -2462,8 +2481,10 @@ fieldset.toc {
 .sequence-links {
 	border: 0 none;
 	font-size: 0.8em;
-	
-	/* 19.10.2010 Symon: Better spacing for sequence links */
+/* 25.10.2010 3:49P Symon: Centering the sequence links adding space with MARGIN. Attempting to increase visibility. */
+	/*text-align: center; 25.10.2010 7:43P Symon: Re-aligning to the left, wasn't working within current format. */
+	margin: 2em 0 0 0;
+/* 19.10.2010 Symon: Better spacing for sequence links */
 /* 	margin: 3em -0.7em 0 0; */
 	padding: 0;
 }
@@ -2732,6 +2753,7 @@ ul#alternatives_shortcuts {
 	font-size: 75%;
 	float: right;
 	padding: 0.25em;
+	margin: 3em 0 0 0; /* 25.10.2010 7:39P Symon: Position shifted left 26.10.2010 10:05A Symon: Removed 10em right MARGIN*/
 }
 
 #alternatives_shortcuts{
@@ -2740,6 +2762,7 @@ ul#alternatives_shortcuts {
 
 ul#alternatives_shortcuts li {
 	list-style-type: none !important;
+	padding: 0 0 1em 0; /* 25.10.2010 7:34P Symon: Spacing between items increased */
 /* 	display:box; */
 /* 	float: right; */
 /* 	margin-left:0; */
@@ -2756,6 +2779,7 @@ ul#alternatives_shortcuts li {
 
 ul#alternatives_shortcuts li a img {
 	text-align: center;
+	vertical-align: middle; /* 25.10.2010 7:30 Symon: Slight adjustment to ADAPTIVE CONTENT icons, better vertical alignment */
 	width: 1.5em;
 	height: 1.5em;
 }
