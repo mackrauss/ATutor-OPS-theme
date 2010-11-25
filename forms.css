@@ -16,8 +16,12 @@ div.input-form {
          */
 }
 
+ul.registration_info {
+
+}
+
 div.input-form div.row h3 {
-	margin-left: 0px;	
+	margin-left: 0;	
 }
 
 div.input-form div.row {
@@ -40,6 +44,7 @@ div.input-form p {
 div.input-form input {
 	z-index: 2;
 }
+
 div.input-form textarea {
 	border: 1px solid #595241;
 	width: 98%;
@@ -65,9 +70,9 @@ input[type=checkbox]{
 }
 
 div.input-form div.buttons {
-
 	padding:8px;
 }
+
 div.input-form div.buttons input {
 	background-color: #3866C4;
 	font-weight: normal;
@@ -109,8 +114,6 @@ input[type=password]{
 
 div.input-form input[type=submit]{
 	border-radius:.3em;
-	
-
 }
 
 input[type=reset]{
@@ -123,9 +126,141 @@ input[type=reset]{
 	margin: 0px; 
 	border-top: 1px solid;
 }
+
 .test_points{
 	float: right; 
 	width: 50%; 
 	text-align: right; 
 	font-weight: bold;
+}
+
+/* 11.03.10 Symon: Labels */
+.registration_info label{
+	float: left;    
+width: 16em;    
+margin-right: 0.2em;    
+text-align: right;  
+}
+
+.registration_info li{
+	float: left;    
+	clear: left;    
+	width: 100%;
+	list-style: none;
+	margin: 0 0 1em 0;
+}
+
+.registration_info {
+	float: left;    
+clear: left;    
+width: 100%;    
+margin: 0 0 1em 0;    
+padding: 0;
+}
+
+/* 11.20.2010 Symon: Added to adjust OPTIONAL FORM ELEMENTS */
+.optional_info {
+	clear:left;
+float:left;
+margin:0 0 1em;
+padding:0;
+width:100%;
+}
+
+.optional_info li{
+	float: left;    
+	clear: left;    
+	width: 100%;
+	list-style: none;
+	margin: 0 0 1em 0;
+}
+
+.optional_info label{
+	float: left;    
+width: 16em;    
+margin-right: 0.2em;    
+text-align: right;  
+}
+
+/* New IDs for OLs - */
+
+#date-of-birth {
+}
+
+#date-of-birth li{
+	display: inline;
+	white-space: nowrap;
+	
+	float: none;
+	clear: none;
+}
+
+#date-of-birth label {
+	float: none;
+	margin:0 -0.1em 0 1em;
+vertical-align:text-top;
+}
+
+#gender label{
+	float: none;
+margin:0 -0.3em 0 1em;
+}
+
+#gender li{
+	display: inline;
+	white-space: nowrap;
+	
+	float: none;
+	clear: none;
+}
+
+#gender {
+}
+
+.group_form h2{
+background-color: #E4E4E4;
+color:#000;
+margin:0 0 1em 1em;
+padding:0.3em 0 0.2em 0.5em;
+width:100%;
+
+font-size: 1.2em;
+}
+
+.group_form h3{
+color:#000;
+margin:0 0 1em 1em;
+padding:0.3em 0 0.2em 0.5em;
+width:100%;
+
+font-size: 0.8em;
+}
+
+fieldset.group_choice {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+#address {
+	list-style: none;
+}
+
+#address li{
+	display: inline;
+	white-space: nowrap;
+	
+	float: none;
+	clear: none;
+}
+
+#address label {
+	float: none;
+}*/
+
+/*--------------------------------------*/
+
+#priv {
+	font-size: 3em;
 }
