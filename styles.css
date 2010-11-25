@@ -1,5 +1,5 @@
 shtml,body{
-	height:100%;
+	height: 100%;
 }
 
 /* main body attributes */
@@ -12,7 +12,7 @@ body {
 }
 
 .page_wrapper{
-/* 19.10.2010 11:49A Symon: Attempting to figure some global spacing solutions – SEE BODY ALSO*/	
+/* 19.10.2010 11: 49A Symon: Attempting to figure some global spacing solutions – SEE BODY ALSO*/	
 	margin: 0;
 	width: 100%;
 }
@@ -50,21 +50,21 @@ h1 {
 	/* Armin 15.09.2010: replace static font-size 16pt with 166% */
 	font-size: 166%;
 	color: #000;
-	font-weight:bold;
-	margin-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 0 0 0.4em 0; /* 08.11.10 9: 46 Symon: Removing PX changing to EM or % */
 }
 
 h2 {
-	clear:right;
+	clear: right;
 	margin-bottom: 8pt;
-	margin-top:1em;
-	padding:0px;
+	margin-top: 1em;
+	padding: 0; /* 08.11.10 9: 46 Symon: Removing PX changing to EM or % */
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
 	font-size: 125%;
-	font-weight:bold;
-	color:#000;
+	font-weight: bold;
+	color: #000;
 }
 h2.sidebox{
     font-size: 110%;
@@ -72,12 +72,12 @@ h2.sidebox{
 h3 {
 	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
 	font-size: 125%;
-    margin-bottom:8pt;
+    margin-bottom: 8pt;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	margin-top:16pt;
-	color:#000;
-	font-weight:bold;
+	margin-top: 16pt;
+	color: #000;
+	font-weight: bold;
 	}
 
 h4 {
@@ -121,16 +121,14 @@ p.toc{
 	margin-top: 0em;
 	margin-left: 1em;
 	margin-right: 3em;
-	border: 1px #ACCFCC solid;
+	border: thin #ACCFCC solid; /* 08.11.10 9: 46 Symon: Removing PX changing THIN */
 } 
 
 /* list attributes */
 ul {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	margin-bottom: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
+	margin: 0; /* 08.11.10 9: 46 Symon: Removing PX changing to EM or % removing redundant bottom top left right 0 */
 }
 
 
@@ -138,9 +136,7 @@ li.folders {
 	list-style: disc url(../../images/folder.gif) outside;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	margin-bottom: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
+	margin: 0; /* 08.11.10 9: 46 Symon: Removing PX changing to EM or % removing redundant bottom top left right 0 */
 }
 
 li.folders .disabled {
@@ -148,13 +144,11 @@ li.folders .disabled {
 }
 
 ul.folder{
-
-list-style-image:none;
-list-style-position:outside;
-list-style-type:none;
-margin:0em;
-padding:0em;
-
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0em;
+	padding: 0em;
 }
 
 
@@ -172,31 +166,31 @@ a.dropdown-title {
 
 /* table border */
 .tableborder {
-	border: 1px #595241 solid;
+	border: thin #595241 solid; /* 08.11.10 9: 46 Symon: Removing PX changing to THIN */
 }
 
 /* main submit button */
 .button {
 	background-color: #3866C4;
-	border:  #153877  solid 1px;
-	font-weight:bold;
-	color:#fff;
+	border: #153877  solid thin; /* 08.11.10 9: 46 Symon: Removing PX changing to THIN */
+	font-weight: bold;
+	color: #fff;
 	font-size: 100%;
 }
-.button:focus {
-	border:1px solid #A50707;
-	/*background-color:  #FFDAB9;	*/
+.button: focus {
+	border: thin solid #A50707; /* 08.11.10 9: 46 Symon: Removing PX changing to THIN*/
+	/*background-color: #FFDAB9;	*/
 }
 /* small submit button at top */
 .button2 {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	background-color: #E9F4F3;
-
 }
-.button2:focus {
+
+.button2: focus {
 	background-color: #E9F4F3;
-	border:  #ACCFCC  solid 1px;
+	border: #ACCFCC  solid thin; /* 08.11.10 9: 46 Symon: Removing PX changing to THIN */
 }
 
 /* date attributes */
@@ -204,18 +198,21 @@ small.date {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	color: #595241;	
-	margin-bottom: 0px; 
+	
+	margin: 0 0 0 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or %, consolidating redundant margins */
+	
+	/*margin-bottom: 0px; 
 	margin-top: 0px;
 	margin-left: 5px;
-	margin-right: 0px;
-	font-size:1em;
+	margin-right: 0px;*/
+	font-size: 1em;
 }
 
 /* page breakline */
 hr {
 	color: #ACCFCC;
 	background-color: white;
-	height: 1px;
+	height: 0.063em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % (original 1px) */
 }
 
 /* message box styles */
@@ -225,9 +222,9 @@ hr {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	background-color: #E9F4F3;
-	padding: 2px;
-	padding-right: 3px;
-	border: 1px #ACCFCC solid;
+	padding: 0.125em 0.188em 0.125em 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % (original 2px, left: 3px) */
+	/*padding-right: 3px;*/
+	border: thin #ACCFCC solid;
 }
 
 /* Editor box large */
@@ -235,14 +232,13 @@ hr {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	background-color: #E9F4F3;
-	margin-left:1em;
-	padding-left: .2em;
-	padding-right: .5em;
-	padding-top: .5em;
-	padding-bottom: .4em;
-	border: 1px #ACCFCC solid;
+	margin-left: 1em;
+	padding-left: 0.2em;
+	padding-right: 0.5em;
+	padding-top: 0.5em;
+	padding-bottom: 0.4em;
+	border: thin #ACCFCC solid; /* 08.11.10 10: 07 Symon: Removing PX changing to THIN */
 }
-
 
 select.dropdown {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
@@ -268,36 +264,45 @@ a .highlight{
 .buttontab {
 	background-color: #E6E6E6;
 	font-weight: 500;
-	border:0;
-	padding-left: 3px;
+	border: 0;
+	
+	/*padding-left: 3px;
 	padding-right: 3px;
-	padding-top: 3px;
-
+	padding-top: 3px;*/
+	
+	padding: 0.188em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % */
+	padding-bottom: 0;
 }
 
-.tab {
+.tab { /* 08.11.10 Symon: I THINK THIS CLASS IS USELESS, NOT BEING USED? */
 	color: black;
 	background-color: #E6E6E6;
-	border-top: 1px #B8AE9C solid;
+	/*border-top: 1px #B8AE9C solid;
 	border-left: 1px #B8AE9C solid;
-	border-right: 1px #B8AE9C solid;
+	border-right: 1px #B8AE9C solid;*/
+	
+	border: thin #B8AE9C solid; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-bottom: none;
+	
 	text-decoration: none;
 	text-align: center;
 	font-weight: bold;
-
-	
 }
+
 .buttontab selected {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	background-color: #6F7172;
 	font-weight: 600;
-	border:0;
-	padding-left: 3px;
+	border: 0;
+	/*padding-left: 3px;
 	padding-right: 3px;
-	padding-top: 3px;
-
+	padding-top: 3px;*/
+	
+	padding: 0.188em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	padding-bottom: 0;
 }
+
 td.selected{
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
@@ -305,14 +310,19 @@ td.selected{
 	text-decoration: none;
 	text-align: center;
 	background-color: white;
-	border-top: 1px #B8AE9C solid;
+	
+	/*border-top: 1px #B8AE9C solid;
 	border-left: 1px #B8AE9C solid;
-	border-right: 1px #B8AE9C solid;
+	border-right: 1px #B8AE9C solid;*/
+	
+	border: thin #B8AE9C solid; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-bottom: none;
 }
+
 .econtainer{
 	/*background-color: #fffaf0;*/
-	border:1px #6F7172 solid;
-	margin-left:.5em;
+	border: thin #6F7172 solid; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	margin-left: 0.5em;
 }
 
 .tab a:link, .etab a:visited {
@@ -320,6 +330,7 @@ td.selected{
 	background-color: white;
 
 }
+
 .tab a:hover {
 	color: black;
 	background-color: white;
@@ -330,32 +341,34 @@ td.selected{
 
 	text-align: center;
 	font-weight: bold;
-	padding: 2px;
+	padding: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
-
 
 .unsaved {
 	color: red;
 	/*background-color: #FFFDE0;*/
 	font-weight: bold;
 }
+
 .saved {
 	/*background-color: #FFFDE0;*/
-	margin: 10px;
+	margin: 0.625em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
-
-
 
 /* the side menu */
 /* the side menu heading */
 td.dropdown-heading {
 	background-color: #DBFDD4;
 	color: #595241;
-	border-left: 1px solid #ECFEEA;
+	/*border-left: 1px solid #ECFEEA;
 	border-right: 1px solid #ECFEEA;
-	border-top: 1px solid #ECFEEA;
+	border-top: 1px solid #ECFEEA;*/
+	
+	border: thin solid #ECFEEA; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-bottom: none;
+	
 	font-weight: bold;
-	padding: 2px;
+	padding: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 td.dropdown-heading a, td.dropdown-heading a:hover, td.dropdown-heading a:visited {
@@ -363,46 +376,57 @@ td.dropdown-heading a, td.dropdown-heading a:hover, td.dropdown-heading a:visite
 }
 
 td.dropdown-heading.closed {
-	border-bottom: 1px solid #ECFEEA;
+	border-bottom: thin solid #ECFEEA; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 /* the side menu content */
 td.dropdown {
-	padding: 2px;
+	padding: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	background-color: white;
 	color: black;
-	border-left: 1px solid #ECFEEA;
+	
+	/*border-left: 1px solid #ECFEEA;
 	border-right: 1px solid #ECFEEA;
-	border-bottom: 1px solid #ECFEEA;
+	border-bottom: 1px solid #ECFEEA;*/
+	
+	border: thin solid #ECFEEA; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-top: none;
+	
 	font-weight: normal;
 }
+
 td.dropdown a, td.dropdown a:visited  {
 	color: #595241;
 	text-decoration: none;
 }
+
 td.dropdown a:hover {
 	color: #595241;
 	text-decoration: underline;
 }
+
 td.dropdown.cell {
-	border-bottom: 0px;
+	border-bottom: 0em;
 }
+
 td.dropdown strong {
 	color: #2A6C28;
 }
 
 /* added for 1.4.2: */
 .results {
-	padding-left: 20px;
+	padding-left: 1.25em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 h5.search-results {
 	background-color: #F7F3ED;
 	color: #595241;
-	padding: 1px;
-	margin-bottom: 5px;
+	padding: 0.063em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	/*margin-bottom: 5px;
 	margin-top: 10px;
-	margin-left: 5px;
+	margin-left: 5px;*/
+	
+	margin: 0.625em 0.313em 0.313em 0; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 small.search-info {
@@ -417,65 +441,73 @@ p.search-description {
 .test-box {
 	background-color: #F7F3ED;
 	color: #595241;
-	border-left: 1px solid #595241;
-	border-right: 1px solid #595241;
-	border-top: 1px solid #595241;
+	
+	border-left: thin solid #595241; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-right: thin solid #595241;
+	border-top: thin solid #595241;
+	
 	font-weight: bold;
-	padding: 2px;
+	padding: 0.125em;
 }
 
 /***************************************************************/
 
 table.tabbed-table {
 	width: 100%;
-	border:thin black solid;
+	border: thin black solid;
 }
+
 table.tabbed-table th#left-empty-tab {
 	background-color: transparent;
-	width: 15px;
-	border-bottom: 1px solid #B8AE9C;
+	width: 0.938em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-bottom: thin solid #B8AE9C; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
+
 table.tabbed-table th#right-empty-tab {
 	text-align: right;
 	background-color: transparent;
-	border-bottom: 1px solid #B8AE9C;
-	width: 400px;
-	padding-right: 5px;
+	border-bottom: thin solid #B8AE9C; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	width: 25em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN (REALLY LARGE EM?) */
+	padding-right: 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
+
 table.tabbed-table th#right-empty-tab a {
 	text-decoration: underline;
 }
+
 table.tabbed-table th.tab-spacer {
 	background-color: transparent;
-	width: 5px;
-	border-bottom: 1px solid #B8AE9C;
+	width: 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-bottom: thin solid #B8AE9C; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 table.tabbed-table th.tab {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	width: 110px;
+	padding-top: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	padding-bottom: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	width: 6.875em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	background-color: #E9F4F3;
-	border-bottom: 1px solid #B8AE9C;
-	border-left: 1px solid #B8AE9C;
-	border-top: 1px solid #B8AE9C;
-	border-right: 1px solid #B8AE9C;
+	border-bottom: thin solid #B8AE9C; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-left: thin solid #B8AE9C;
+	border-top: thin solid #B8AE9C;
+	border-right: thin solid #B8AE9C;
 }
-table.tabbed-table th.tab:hover {
+
+table.tabbed-table th.tab: hover {
 	background-color: #ACCFCC;
 }
 
 table.tabbed-table th.tab a:focus {
 	color: white;
 }
+
 table.tabbed-table th.selected {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	width: 110px;
+	padding-top: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	padding-bottom: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	width: 6.875em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	background-color: #ACCFCC;
-	border-left: 1px solid #B8AE9C;
-	border-top: 1px solid #B8AE9C;
-	border-right: 1px solid #B8AE9C;
+	border-left: thin solid #B8AE9C;
+	border-top: thin solid #B8AE9C;
+	border-right: thin solid #B8AE9C;
 }
 
 table.tabbed-table a, table.tabbed-table a:visited, table.tabbed-table a:hover {
@@ -484,182 +516,188 @@ table.tabbed-table a, table.tabbed-table a:visited, table.tabbed-table a:hover {
 }
 
 a#my-start-page {
-	padding: 2px;
-	padding-left: 15px;
+	padding: 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	padding-left: 0.938em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	background-repeat: no-repeat;
-	background-position: 2px 5px;
+	background-position: 0.125em 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 a#back-to {
-	padding-left: 20px;
+	padding-left: 1.25em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	background-image: url(images/back.gif);
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: 0em 0em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
-/* 19.10.2010 12:54P Symon: NEW STYLE - found but unstyled*/
+/* 19.10.2010 12: 54P Symon: NEW STYLE - found but unstyled*/
 .crumbcontainer {
 	padding: 0 2em 0 2em;
 }
 
 div#breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-	clear:both;
+	clear: both;
 	/* Armin 15.09.2010: replace static font-size 7pt with 73% */
     font-size: 73%;
 	/* 19.10.2010 Symon: Removed PX and set to 0*/
 	padding: 0;
 	margin: 0;
-	float:left;
-	/*margin-left:6.2em;*/
+	float: left;
+	/*margin-left: 6.2em;*/
 }
 
-div#breadcrumbs a { color:#999999;}
+div#breadcrumbs a { color: #999999;}
 
 /* Armin 10.09.2010 style shortcut list */
 div#shortcuts {
 	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
 	font-size: 82%;
-	float:right;
-/* 19.10.2010 12:59P Symon*/
+	float: right;
+/* 19.10.2010 12: 59P Symon*/
 	margin: 0;
 	padding: 0;
 	/*margin-right: 1em;*/
 }
 
 #shortcuts li {
-	display:inline;
-	float:left;
-	margin-bottom:0;
-	margin-left:0.45em;
-	margin-right:0.45em;
-	margin-top:0;
-	position:relative;
-	white-space:nowrap;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	margin-left: 0.45em;
+	margin-right: 0.45em;
+	margin-top: 0;
+	position: relative;
+	white-space: nowrap;
 }
 
 h2.page-title {
-	clear:right;
-	margin-bottom: 0;
-	padding:0px;
+	clear: right;
+	/*margin-bottom: 0;*/
+	margin: 0 0 0 0; /* 08.11.10 Symon: redefining margins so previous elements can define spaceing */
+	padding: 0;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	/* Armin 15.09.2010: replace static font-size 14pt with 146% */
 	font-size: 146%;
-	font-weight:bold;
-	color:#000;
+	font-weight: bold;
+	color: #000;
 }
 
 div#help {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-bottom: 5px;
+	border-left: thin solid black; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	border-right: thin solid black;
+	border-bottom: thin solid black;
+	padding-left: 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	padding-right: 0.313em;
+	padding-bottom: 0.313em;
 	background-color: #F7F3ED;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 0.313em;
+	margin-right: 0.313em;
 	font-size: small;
 }
 
 h3#help-title {
-	margin-left: 5px;
-	margin-right: 5px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	padding: 1px;
+	margin-left: 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	margin-right: 0.313em;
+	border-left: thin solid black;
+	border-right: thin solid black;
+	padding: thin;
 	background-color: #F7F3ED;
 }
+
 .line {
-	border-bottom: 1px solid black;
+	border-bottom: thin solid black; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
+
 div#help p {
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 }
 
 div#toctoggle {
 	float: left;
-	padding-left: 10px;
+	padding-left: 0.625em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 h1#section-title {
-	/*white-space:nowrap;*/
-	/*margin-left:1em;*/
+	/*white-space: nowrap;*/
+	/*margin-left: 1em;*/
 	/* Armin 15.09.2010: replace static font-size 14pt with 146% */
 	font-size: 146%;
-	color:#3866C4;
-	font-weight:bold;
-	margin-bottom: 0.5em;
+	color: #3866C4;
+	font-weight: bold;
+	margin: 0 0 1.5em 0;
 }
 
 div#top-links {
-	float:right;
-	padding-right: 5px;
-/* 	margin-right:5px; */
+	float: right;
+	padding-right: 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+/* 	margin-right: 5px; */
 	/* Armin 19.10.2010: I changed the order of the elements so the margin has to be positive to push in the element instead of negative to pull it up */
-	margin-top:1.4em;
-	white-space:nowrap;
+	margin-top: 1.4em;
+	white-space: nowrap;
 	/* Armin 15.09.2010: Replace fixed font-size 8pt with 82% */
 	font-size: 82%;
-	font-weight:normal;	
+	font-weight: normal;	
 }
 
 div#top-links a:link, div#top-links a:visited {
-	text-decoration:none;
-	margin-left:3px;
-	margin-top:20px;
+	text-decoration: none;
+	margin-left: 0.188em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/ 
+	margin-top: 1.25em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	color: #5984C4;
-	font-style:normal;
+	font-style: normal;
 	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
 	font-size: 82%;
 }
 	
 div#top-links a:focus, div#top-links a:hover{
-	color:white !important;
-	background-color:#3866C4;
+	color: white !important;
+	background-color: #3866C4;
 }
 
-div#top-links ul li a:hover {font-weight:bold !important;}
-
-#jumpmenu:focus{
-	background-color:#F6EAD6;
+div#top-links ul li a:hover {
+	font-weight: bold !important;
 }
+
+#jumpmenu: focus {
+	background-color: #F6EAD6;
+}
+
 a#editor-link {
 	background-color: #F7F3ED;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 15px;
-	padding-right: 8px;
-	border: 1px solid #cccccc;
+	padding-top: 0.063em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	padding-bottom: 0.063em;
+	padding-left: 0.938em;
+	padding-right: 0.5em;
+	border: thin solid #cccccc;
 	font-weight: normal;
 	text-decoration: none;
 }
 
-a#editor-link:hover {
+a#editor-link: hover {
 	background-color: #F7F3ED;
-	border: 1px solid #B8AE9C;
+	border: thin solid #B8AE9C; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 a#editor-link.off {
 	background-image: url(images/pen.gif);
 	background-repeat: no-repeat;
-	background-position: 0px 2px;
+	background-position: 0em 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
+
 a#editor-link.on {
 	background-image: url(images/pen2.gif);
 	background-repeat: no-repeat;
-	background-position: 0px 2px;
+	background-position: 0 0.125em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
-
 
 /* for data tables */
 
 table.data {
 	/* Armin 27.09.2010: instead of adding another table.data rule set */
-	clear:left;
-	border-spacing:0;
+	clear: left;
+	border-spacing: 0;
 	width: 100%; 
 	margin-left: auto; 
 	margin-right: auto;
@@ -669,24 +707,24 @@ table.data {
 
 table.data th {
 	background-color: #D5D5D5;
-	padding: 3px;
+	padding: 0.188em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	white-space: nowrap;
-	color:#333;
-	text-align:left;}
-
+	color: #333;
+	text-align: left;
+}
 
 table.data th a {
-	color: #333333;
-	padding-right: 15px;
-	margin-right: 15px;
+	color: #333;
+	padding-right: 0.938em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	margin-right: 0.938em;
 	background-image: url('../default/images/sort.gif');
 	background-repeat: no-repeat;
 	background-position: right;
 }
 
 table.data tbody {
-	border-top: 1px solid #B8AE9C;
-	border-bottom: 1px solid #B8AE9C;
+	border-top: thin solid #B8AE9C;
+	border-bottom: thin solid #B8AE9C;
 }
 
 table.data tbody th {
@@ -695,11 +733,11 @@ table.data tbody th {
 	cursor: auto;
 	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
 	font-size: 82%;
-	color:#4D4D4D;
+	color: #4D4D4D;
 }
 
 table.data td {
-	padding: 3px;
+	padding: 0.188em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 }
 
 /* Armin 27.09.2010: try to keep the table date reasonably sized */
@@ -707,7 +745,7 @@ table.data tbody td {
 	font-size: 100%;
 }
 
-table.data tbody tr:hover {
+table.data tbody tr: hover {
 	/*background-color: #F3F6FA;*/
 	cursor: pointer;
 }
@@ -719,98 +757,99 @@ table.data tbody tr.selected {
 
 /* Armin 21.10.2010: Adding underlining for course list */
 table.data tbody tr td a {
-	text-decoration: underline;
+	text-decoration: none; /* 08.11.10 TEMP underline removed, attempting to remove visual noise*/
 }
 
 table.data tbody tr td span a {
-	text-decoration: underline !important;
+	text-decoration: none !important; /* 08.11.10 TEMP underline removed, attempting to remove visual noise*/
 }
 /* Armin 21.10.2010: End - Adding underlining for course list */
 
 table.data tfoot {
 	background-color: #D5D5D5;
-	padding: 3px;
+	padding: 0.188em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
 	white-space: nowrap;
-	color:#333;}
-
-table.data tfoot tr:first-child td {
-	border-top: 1px solid #B8AE9C;
-	padding: 5px;
-	background-repeat: no-repeat;
-	background-position: 4px 5px;
-	padding-left: 33px;
+	color: #333;
 }
 
-table.data.static tfoot td, table.data.static tfoot tr:first-child td {
-	border-top: 1px solid #B8AE9C;
-	padding: 5px;
+table.data tfoot tr: first-child td {
+	border-top: thin solid #B8AE9C;
+	padding: 0.313em; /* 08.11.10 10: 07 Symon: Removing PX changing to EM or % THIN*/
+	background-repeat: no-repeat;
+	background-position: 0.25em 0.313em;
+	padding-left: 2.063em;
+}
+
+table.data.static tfoot td, table.data.static tfoot tr: first-child td {
+	border-top: thin solid #B8AE9C;
+	padding: 0.313em;
 	background-image: none;
-	padding-left: 0px;
+	padding-left: 0em;
 
 }
 
 /*buttons*/
 table.data tfoot input {
 	background-color: #3866C4;
-	border:  #153877  solid 1px;
-	font-weight:bold;
-	color:#fff;
+	border: #153877  solid thin;
+	font-weight: bold;
+	color: #fff;
 }
-table.data tfoot input:focus {
+
+table.data tfoot input: focus {
 	background-color: #FFDAB9;
-	border:  #AAA  solid 1px;
+	border: #AAA  solid thin;
 }
 
 
 /* used for static tables with no form elements: */
-table.data.static tbody tr:hover {
+table.data.static tbody tr: hover {
 	background-color: transparent;
 	cursor: auto;
 }
-
-
 
 /* course browser: */
 
 div#browse {
 	margin-left: auto; 
-	margin-right: auto; 
+	margin-right: auto;
 	width: 80%;
 }
 
 div.browse-selected {
 	background-image: url('images/side_arrow.gif'); 
 	background-repeat: no-repeat; 
-	padding-left: 9px; 
+	padding-left: 0.6em; 
 	background-position: center left;
 }
 
 div.browse-unselected {
-	padding-left: 9px; 
+	padding-left: 0.6em; 
 }
 
 ul.browse-list {
 	list-style: none;
-	padding:0px;
+	padding: 0;
 }
 
 /* feedback /errors */
 div#error {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	padding: 5px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	
+	padding: 0.313em;
 	color: #A50707;
 	background-color: #FFFBD9;
-	padding-left: 25px;
+	padding-left: 1.563em;
 	font-weight: bold;
 	/* Armin 15.09.2010: replace static font-size 11pt with 115% */
 	font-size: 115%;
 }
 div#error h4 {
 	color: black;
-	margin-left: 0px;
+	margin: 0;
 	/* Armin 15.09.2010: replace static font-size 9pt with 90% */
 	font-size: 90%;
 }
@@ -818,23 +857,31 @@ div#error h4 {
 div#error ul, div#feedback ul, div#help ul {
 	position: relative;
 	list-style: none;
-	margin-left: 0px;
-	padding-left: 0px;
+	margin-left: 0em;
+	padding-left: 0em;
 }
 
 div#error ul li{
-	margin-top: 5px;
+	margin-top: 0.313em;
 }
 
 div#feedback {
-	margin-left: auto;
+	/*margin-left: auto;
 	margin-right: auto;
 	margin-top: 0.2em;
-	margin-bottom: 0.3em;
-	padding: 0.2em;
+	margin-bottom: 0.3em;*/
+	
+	/* 08.11.10 Symon: Centering the notifications and refining the padding */
+	margin: 0.2em auto 0.3em auto;
+	width: 50%;
+	
+	padding: 0.6em 0 0.7em 0;
 	color: #333;
 	font-weight: normal;
-	background-color:#FFFBD9;
+	background-color: #FFFBD9;
+	
+	text-align: center;
+	
 	/* Armin 15.09.2010: replace static font-size 11pt with 115% */
 	font-size: 115%;
 }
@@ -843,10 +890,10 @@ div#help {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border: 1px solid #ACCFCC;
-	padding: 5px;
+	margin-top: 0.938em;
+	margin-bottom: 0.938em;
+	border: thin solid #ACCFCC;
+	padding: 0.313em;
 	background-color: #E9F4F3;
 	color: #024C41;
 }
@@ -855,10 +902,10 @@ div#info {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border: 1px solid #B8AE9C;
-	padding: 5px;
+	margin-top: 0.938em;
+	margin-bottom: 0.938em;
+	border: thin solid #B8AE9C;
+	padding: 0.313em;
 	background-color: #EFE6FF;
 	color: #595241;
 	font-weight: bold;
@@ -868,10 +915,10 @@ div#warning {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border: 1px solid #FF8400;
-	padding: 5px;
+	margin-top: 0.938em;
+	margin-bottom: 0.938em;
+	border: thin solid #FF8400;
+	padding: 0.313em;
 	background-color: #FFF6ED;
 	color: #D95900;
 	font-weight: bold;
@@ -881,7 +928,7 @@ acronym {
 }
 
 div.news p {
-	margin-left: 10px;
+	margin-left: 0.625em;
 }
 div.news span.date {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
@@ -891,20 +938,20 @@ div.news span.date {
 
 /* home page links */
 div.home-link {
-	padding: 2px;
+	padding: 0.125em;
 	float: left;
 	text-align: center;
-	margin: 2px;
-	width: 120px;
-	height: 90px;
+	margin: 0.125em;
+	width: 7.5em;
+	height: 6.625em;
 }
-div.home-link:hover {
-	padding: 1px;
+div.home-link: hover {
+	padding: 0.063em;
 	background-color: #F7F3ED;
-	border: 1px solid #afafaf;
+	border: thin solid #afafaf;
 	float: left;
 	text-align: center;
-	margin: 2px;
+	margin: 0.125em;
 }
 div.home-link a {
 	text-decoration: none;
@@ -912,39 +959,39 @@ div.home-link a {
 }
 
 div.home-link img {
-	border: 0px;
+	border: 0em;
 }
 
 /* sequence links */
 div#sequence-links {
-	float:right;
-	margin-top: -27px;
-	padding-right: 5px;
-	/*padding-top:7px;*/
+	float: right;
+	margin-top: -1.688em;
+	padding-right: 0.313em;
+	/*padding-top: 7px;*/
 }
 div#sequence-links a {
 	text-decoration: none;
 }
 
 div.dropdown {
-	width: 200px;
-	padding: 2px;
+	width: 12.5em;
+	padding: 0.125em;
 	background-color: white;
 	color: black;
-	border-left: 1px solid #ECFEEA;
-	border-right: 1px solid #ECFEEA;
-	border-bottom: 1px solid #ECFEEA;
+	border-left: thin solid #ECFEEA;
+	border-right: thin solid #ECFEEA;
+	border-bottom: thin solid #ECFEEA;
 	font-weight: normal;
 }
 
 div.dropdown-heading {
 	background-color: #ACCFCC;
 	color: #595241;
-	border-left: 1px solid #ECFEEA;
-	border-right: 1px solid #ECFEEA;
-	border-top: 1px solid #ECFEEA;
+	border-left: thin solid #ECFEEA;
+	border-right: thin solid #ECFEEA;
+	border-top: thin solid #ECFEEA;
 	font-weight: bold;
-	padding: 2px;
+	padding: 0.125em;
 }
 
 div.required {
@@ -953,16 +1000,16 @@ div.required {
 	font-size: large;
 	float: left;
 	position: relative;
-	margin-top: -5px;
-	height: 15px;
-	padding-right: 2px;
+	margin-top: -0.313em;
+	height: 0.938em;
+	padding-right: 0.125em;
 }
 
 
 
 form {
 	clear: none;
-	display:inline;
+	display: inline;
 }
 
 
@@ -975,38 +1022,38 @@ div.paging {
    width: 100%;
    text-align: left;
    margin: 0.5em auto;
-   background-color:#fff;
+   background-color: #fff;
 }
-div.paging a {font-weight:normal;
-color:#666;}
+div.paging a {font-weight: normal;
+color: #666;}
 
-div.paging a:hover {font-weight:normal; text-decoration:underline; color:#000;}
+div.paging a:hover {font-weight: normal; text-decoration: underline; color: #000;}
 div.paging ul {
    list-style: none;
    display: inline;
-   padding: 0px;
+   padding: 0em;
   
 }
 div.paging li { 
 	display: inline; 
-	padding-left: 2px; 
-	padding-right: 2px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-left: 0.125em; 
+	padding-right: 0.125em;
+	padding-top: 0em;
+	padding-bottom: 0em;
 }
 
 div.paging li a {
 	text-decoration: none;
-	padding-left: 4px;
-	padding-right: 4px;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	border-left: thin solid white;
+	border-right: thin solid white;
 }
 
 div.paging li a:hover, div.paging li a.current {
 }
 
-div.paging ul li {margin-bottom:10px;}
+div.paging ul li {margin-bottom: 0.625em;}
 
 #header{
 	background-color: #FFF;
@@ -1014,13 +1061,17 @@ div.paging ul li {margin-bottom:10px;}
 	background-repeat: no-repeat;
 	/*height : 6.85em;*/
 /* Armin 19.10.2010: Take out */
-/* 	padding-top:30px; */
-	margin-left:2em;
-	margin-right: 1em;
-	}
+/* 	padding-top: 30px; */
+	/*margin-left: 2em;
+	margin-right: 1em;*/
+	
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height: 6em;
+}
 
 #header a{
-	font-weight:600;
+	font-weight: 600;
 }
 
 
@@ -1030,10 +1081,10 @@ div.paging ul li {margin-bottom:10px;}
 }
 #tl_corner{
 
-	background-image:url(images/tl_corner.gif);
+	background-image: url(images/tl_corner.gif);
 	background-position: top left;
 	background-repeat: no-repeat;
-padding:0;
+padding: 0;
 }
 div.top {
     /* Top space */
@@ -1041,85 +1092,87 @@ div.top {
 	color: #FFF;
     margin: 0;
     padding: 0;
-	padding-top:9px;
+	padding-top: 0.563em;
 }
 div.tabs {
-	/* Navigational Plone Tabs(tm), implemented by customizing the a tag - they are surprisingly elegant. The power of CSS runs strong in these :) */
+	/* Navigational Plone Tabs(tm), implemented by customizing the a tag - they are surprisingly elegant. The power of CSS runs strong in these : ) */
     background-color: transparent;
 	border-collapse: collapse;
-	border-bottom: 1px solid #B8AE9C;
+	border-bottom: thin solid #B8AE9C;
 	padding: 0.5em 0em 0em 2em;
 	white-space: nowrap;
-	line-height:150%;
+	line-height: 150%;
 }
 
 div.tabs a {
     /* The normal, unselected tabs. They are all links */
     background-color: transparent;
     border-color: #B8AE9C;
-    border-width: 1px; 
+    border-width: thin; 
     border-style: solid solid none solid;
     color: #595241;
     height: 1.2em;
     margin-right: 0.5em;
     padding: 0em 2em 0em;
-	margin-top:90px;
+	margin-top: 6.625em;
     
 }
 
 div.tabs a.selected {
     /* The selected tab. There's only one of this */
     background-color: white;
-    border-bottom: #B8AE9C 1px solid;
+    border-bottom: #B8AE9C thin solid;
     color: #595241;
     font-weight: normal;
 }
 
 div.tabs a:hover, div.tabs a.active {
     background-color: #B8AE9C;
-    border-bottom: 1px solid #B8AE9C;
+    border-bottom: thin solid #B8AE9C;
     color: white;
 }
 
 .headingbox a{
-text-decoration:underline;
+text-decoration: underline;
 
 }
 
 h4.box {
 	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
 	font-size: 82%;
-	padding: 2px;
-	font-weight:bold;
+	padding: 0.125em;
+	font-weight: bold;
 /* Armin 01.09.2010: image does not exist so don't call it to reduce error messages' */
-/* 	background-image:url(images/slidemenu-h-bg.png); */
-	background-repeat:repeat-x;
-	border-top-width: 1px;
-	border-right-width: 1px;
-	border-left-width: 1px;
+/* 	background-image: url(images/slidemenu-h-bg.png); */
+	background-repeat: repeat-x;
+	
+	border: thin solid #686868; /*08.11.10 12: 26 Symon: Condensed redundant styles into single line */ 
+	/*border-top-width: thin;
+	border-right-width: thin;
+	border-left-width: thin;
 	border-top-style: solid;
 	border-right-style: solid;
 	border-bottom-style: none;
 	border-left-style: solid;
 	border-top-color: #686868;
 	border-right-color: #686868;
-	border-left-color: #686868;    /* Added by Armin width in percent (match to percentage in div.box) */
-    /*width:95%;*/
+	border-left-color: #686868;*/    /* Added by Armin width in percent (match to percentage in div.box) */
+    /*width: 95%;*/
 }
 
-.fl-clear {background-color:#eee;
-border:none;}
+.fl-clear {background-color: #eee;
+border: none;}
 
 div.box {
-	padding: 5px;
-	background-color:fff;
+	padding: 0.313em;
+	background-color: fff;
 	color: black;
 	/* Armin 15.09.2010: replace static font-size 8.5pt with 85% */
 	font-size: 85%;
 	font-weight: normal;
-	border-right-width: 1px;
-	border-bottom-width: 1px;
-	border-left-width: 1px;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
 	border-top-style: none;
 	border-right-style: solid;
 	border-bottom-style: solid;
@@ -1127,27 +1180,27 @@ div.box {
 	border-right-color: #666;
 	border-bottom-color: #666;
 	border-left-color: #666;	/*Changed by Armin from 21em to percentage*/
-	padding-top: 2px;
-	padding-right: 2px;
-	padding-bottom: 2px;
-	padding-left: 5px;	/*width:95%;*/
+	padding-top: 0.125em;
+	padding-right: 0.125em;
+	padding-bottom: 0.125em;
+	padding-left: 0.313em;	/*width: 95%;*/
 }
 
 h5.box { 
     background-color: #6F7172;
-    border: 1px solid #B8AE9C;
+    border: thin solid #B8AE9C;
     border-style: solid solid none solid;
     color: Black;
     padding: 0em 1em 0em 1em;
     
     display: inline;
-	font-size:  1em;
+	font-size: 1em;
     height: 1em;
 }
 
 div.box a:link {
 	text-decoration: none;
-	color:#26436a;
+	color: #26436a;
 }
 
 div.box a:visited {
@@ -1170,7 +1223,7 @@ div.box strong a:visited {
 
 div.box .content {
     padding: 1em;
-	font-size:  1em;
+	font-size: 1em;
 }
 
 div.box a.close {
@@ -1211,11 +1264,11 @@ div.course {
 	position: relative;
 	width: 25em;
 	height: 10.5em;
-	border: rgb(204, 204, 204) 1px solid;
+	border: rgb(204, 204, 204) thin solid;
 	background-color: #C5E3FF;
 	float: left;
-	margin: 3px;
-	padding: 5px;
+	margin: 0.188em;
+	padding: 0.313em;
 }
 
 div.course.break {
@@ -1223,33 +1276,33 @@ div.course.break {
 }
 
 div.course h2 {
-	border: 0px;
+	border: 0em;
 	font-weight: normal;
 	font-size: large;
 
 }
 
-div.course:hover {
-	background-color:#FBF4E9;
-	border: #B8AE9C 1px solid;
+div.course: hover {
+	background-color: #FBF4E9;
+	border: #B8AE9C thin solid;
 }
 
 div.course img.icon	{
 	float: left;
-	margin: 2px;
-	height:6.8em;
-	width:6.8em;
-	margin-right:5px;
+	margin: 0.125em;
+	height: 6.8em;
+	width: 6.8em;
+	margin-right: 0.313em;
 }
 img.headicon	{
-	float:  left;
-	margin-top:1.2em;
+	float: left;
+	margin-top: 1.2em;
 
-	height:6.45em;
-	width:6.45em;
-	vertical-align:top;
+	height: 6.45em;
+	width: 6.45em;
+	vertical-align: top;
 	text-align: right;
-	border:1px solid white;
+	border: thin solid white;
 }
 div.course div.shortcuts {
 	text-align: right;
@@ -1279,34 +1332,34 @@ fieldset {
 	margin-top: 0pt;
 	margin-bottom: 0pt;
 	margin-left: 0pt;
-	list-style-type:  none;
+	list-style-type: none;
 	padding-left: 0pt; 
 }
 
 a#guide {
-	background-image: url('../default/images/guide.gif'); background-repeat: no-repeat; background-position: 7px 4px;
+	background-image: url('../default/images/guide.gif'); background-repeat: no-repeat; background-position: 0.438em 0.25em;
 	background-color: #eee;
-	padding: 2px 10px 2px 27px;
-	border: 1px solid #ccc;
-	float:right;
-	text-decoration:none;
-	font-size:0.85em;
+	padding: 0.125em 0.625em 0.125em 1.688em;
+	border: thin solid #ccc;
+	float: right;
+	text-decoration: none;
+	font-size: 0.85em;
 }
 
 /*CONTENT Styles*/
 /* Symon */
 div#content-text {
-	/*font-family:Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
+	/*font-family: Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
 	padding-right: 0.375em;
-	/*line-height:150%;*/
+	/*line-height: 150%;*/
 	margin-left: 0.275em;
 	max-width: 100%;
-	width:80%;
+	width: 80%;
 }
 
 #content-text p{
-	font-size:1.2em;
-	line-height:1.4em;
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 #content-text blockquote{
@@ -1319,95 +1372,95 @@ div#content-text {
 	margin: 0.5em 1.5em 0.5em 0;
 	padding: 0.1em 0 0 0;
 	float: left;
-	border-top: solid 2px black;
-	border-bottom: solid 2px black;
+	border-top: solid 0.125em black;
+	border-bottom: solid 0.125em black;
 }
 
 /* LIST ELEMENTS */
 #content-text li {
 	margin: 0 0 0.4em 1em;
-	padding:0;
-	line-height:1.4em;
-	list-style:disc;
-	/*font-family:Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
+	padding: 0;
+	line-height: 1.4em;
+	list-style: disc;
+	/*font-family: Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
 	/* Armin 15.09.2010: replace static font-size 11.5pt with 120% */
 	font-size: 120% /*leave me alone please - joel*/;
 }
 
 /*#content-text ul{
-	margin:0 0 0 4em;
-	padding:0 0 1em 0;
+	margin: 0 0 0 4em;
+	padding: 0 0 1em 0;
 	list-style: disc;
 }
 
 #content-text ol{
-	margin:0 0 0.5em 0;
-	padding:0;
-	list-style:none;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	list-style: none;
 }*/
 
 /* HEADING styles */
 #content-text h2 {
-	margin:1.5em 0 0.4em 0;
-	padding:0.5em 0 0 0;
-	font-size:1.8em;
-	clear:left;
+	margin: 1.5em 0 0.4em 0;
+	padding: 0.5em 0 0 0;
+	font-size: 1.8em;
+	clear: left;
 }
 
 #content-text h3 {
-	margin:1.5em 0 0.4em 0;
-	padding:0.5em 0 0 0;
-	font-size:1.4em;
-	clear:left;
+	margin: 1.5em 0 0.4em 0;
+	padding: 0.5em 0 0 0;
+	font-size: 1.4em;
+	clear: left;
 }
 
 #content-text h4 {
-	margin:1em 0 0.4em 0;
-	padding:0.5em 0 0 0;
-	font-size:1.2em;
-	clear:left;
+	margin: 1em 0 0.4em 0;
+	padding: 0.5em 0 0 0;
+	font-size: 1.2em;
+	clear: left;
 }
 
 #content-text h5 h6 { /* Limiting the levels of visual hierarchy to four as opposed six */
-	margin:1em 0 0.4em 0;
-	padding:0.5em 0 0 0;
-	font-size:1.2em;
-	clear:left;
+	margin: 1em 0 0.4em 0;
+	padding: 0.5em 0 0 0;
+	font-size: 1.2em;
+	clear: left;
 }
 
 #content-text h6 { /* Limiting the levels of visual hierarchy to four as opposed six */
-	margin:1em 0 0.4em 0;
-	padding:0.5em 0 0 0;
-	font-size:1.2em;
-	clear:left;
+	margin: 1em 0 0.4em 0;
+	padding: 0.5em 0 0 0;
+	font-size: 1.2em;
+	clear: left;
 }
 
 #content-text a:link {
 	font-weight: normal;
 	color: #487CD2;
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 /* Armin 30.08.2010: Added special syle for visited links in content*/
 #content-text a:visited {
 	font-weight: normal;
 	color: #3F2670;
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 #content-text img {
-	margin:0 0 1em 0;
-	border:none;
+	margin: 0 0 1em 0;
+	border: none;
 	}
 
-/* 25.10.2010 3:47P Commented out FLOAT: LEFT, it was causing some problems with flowing text. */
+/* 25.10.2010 3: 47P Commented out FLOAT: LEFT, it was causing some problems with flowing text. */
 #content-text object{
-/* 	background-color:#fff; */
-	margin:0 0 0.8em 0;
-	padding:0 0 0 0;
-/* 	width:100%; */
-	/*float:left;*/
-	text-align:left;
+/* 	background-color: #fff; */
+	margin: 0 0 0.8em 0;
+	padding: 0 0 0 0;
+/* 	width: 100%; */
+	/*float: left;*/
+	text-align: left;
 }
 
 #content-text sub{ /*Custom text to describe media content*/
@@ -1415,9 +1468,9 @@ div#content-text {
 	font-size: 0.7em;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	color:#999;
-	margin:0;
-	padding:0;
+	color: #999;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -1448,7 +1501,7 @@ div#content-test {
 */
 
 div#content-info {
-	margin: 5pt;
+	margin: 0.5em;
 	padding: 0 0 1em 0;
 	font-size: 0.7em;
 	color: #999;
@@ -1458,9 +1511,9 @@ div#content-info {
 div#
 {
 	text-align: left;
-	margin: 0px auto;
-	padding: 0px;
-	border:0;
+	margin: 0em auto;
+	padding: 0em;
+	border: 0;
 	width: 95%;
 }
 
@@ -1468,17 +1521,17 @@ div#
 div.column {
 	float: left;
 	width: 45%;
-	margin: 5px;
-	min-width: 170px;
-	margin-right:1em;
+	margin: 0.313em;
+	min-width: 10.625em;
+	margin-right: 1em;
 }
 
 
 
 div.insidecol {
-   min-height: 170px;
-   height: 170px;
-   padding:5px;
+   min-height: 10.625em;
+   height: 10.625em;
+   padding: 0.313em;
 }
 
 
@@ -1495,44 +1548,44 @@ ul#home-links li {
 	margin: 0.1em;
 	width: 8.5em;
 	height: 7.0em;
-	padding-left:0px;
+	padding-left: 0em;
 
 }
 ul#home-links li a {
 	text-decoration: none;
-	border: 1px transparent;
+	border: thin transparent;
 	font-weight: bold;
 }
 ul#home-links li a img {
-	border: 0px;
+	border: 0em;
 	display: block;
-	padding-left:25px;
+	padding-left: 1.563em;
 }
 
 /* enrollment tabs */
 #navlist {
-	padding: 0px;
+	padding: 0em;
 	margin-left: 0;
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 4px;
-	margin-top:15px;
+	margin-bottom: 0.25em;
+	margin-top: 0.938em;
 	white-space: nowrap;
 }
 
 #navlist li {
 	list-style: none;
 	display: inline;
-	margin: 0px;
+	margin: 0em;
 }
 
 #navlist li a {
-	padding: 3px 9px;
-	border: 1px solid #F7F3ED;
+	padding: 0.188em 0.563em;
+	border: thin solid #F7F3ED;
 	border-bottom: none;
 	background-color: #F7F3ED;
 	text-decoration: none;
-	margin-left: 4px;
+	margin-left: 0.25em;
 /*
 	-moz-border-radius-topright: 4px;
 	-moz-border-radius-topleft: 4px;
@@ -1549,9 +1602,9 @@ ul#home-links li a img {
 .img-size-tree {
 	vertical-align: middle;
 	margin: 0;
-        padding:0;
-	/*height:1.45em;*/
-	/* changed from 1.5em to px; mobile theme and tighten space*/ width:12px;
+        padding: 0;
+	/*height: 1.45em;*/
+	/* changed from 1.5em to px; mobile theme and tighten space*/ width: 0.75em;
 }
 /* profile page */
 
@@ -1563,26 +1616,26 @@ dl#public-profile dt {
 	float: left;
 	font-weight: bold;
 	width: 30%;
-	border-right: 1px solid #F7F3ED;
-	padding: 5px 5px 5px 0px;
+	border-right: thin solid #F7F3ED;
+	padding: 0.313em 0.313em 0.313em 0em;
 	vertical-align: middle;
-	margin-right: 5px;
+	margin-right: 0.313em;
 }
 dl#public-profile dd {
-	margin-bottom: 5px;
-	padding: 5px 0px 5px 5px;
+	margin-bottom: 0.313em;
+	padding: 0.313em 0em 0.313em 0.313em;
 }
 
 div.social-right{
-	width:65%;
-	float:left;
-	clear:right;
-	margin-left:.5em;
+	width: 65%;
+	float: left;
+	clear: right;
+	margin-left: .5em;
 }
 div.social-left{
-	width:29%;
-	margin-left:.5em;
-	float:left;
+	width: 29%;
+	margin-left: .5em;
+	float: left;
 }
 
 /* floating layout */
@@ -1591,20 +1644,21 @@ div.social-left{
     /*float: left;*/
     /* Armin end */
     width: auto;
-	min-width:97%;
-	max-width:100%;
-    padding-top:0;
-    padding-left:2em;
+	min-width: 97%;
+	max-width: 100%;
+    padding-top: 0;
+    padding-left: 2em;
 }
 #contentcolumn {
     /* Armin */
     float: left;
     /* Armin end */
-/*    overflow:hidden;*/
+/*    overflow: hidden;*/
     max-width: 70%;
 	min-width: 70%;
 	/* j */
 	width: auto;
+	margin: 0 0 0 0;
 /* 19.10.2010: Margin out and add it to leftcolumn */
 /* 	margin-left: 1em; */
 
@@ -1612,11 +1666,11 @@ div.social-left{
 #contentcolumn h3  {
 	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
 	font-size: 125%;
-	margin-bottom:8pt;
+	margin-bottom: 8pt;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	margin-top:16pt;
-	color:#000;
+	margin-top: 16pt;
+	color: #000;
 	}
 	
 #contentcolumn_shiftright {
@@ -1624,118 +1678,124 @@ div.social-left{
 }
 /* Use this to move column left */
 
-/* 19.20.2010 12:16p Symon: One step, attempting to establish global spacing*/
+/* 19.20.2010 12: 16p Symon: One step, attempting to establish global spacing*/
 #leftcolumn{
 	float: left;
 	/*margin-top: 2em;
 	margin-left: 2em;
 	
-	margin-bottom:0px;*/
-	margin-right: 1em;
+	margin-bottom: 0px;*/
+	margin: 0 2em 0 0;
 /* 	margin: 0; */
 	width: auto;
 	max-width: 28%;
 	min-width: 20%;
-	white-space:normal;
+	white-space: normal;
 	/*padding-right: 1%;*/
 }
 
 #footer{
-	/*position:absolute;
-	bottom:0px;*/
+	/*position: absolute;
+	bottom: 0px;*/
 	clear: left;
 	width: 100%;
 	text-align: center;
-	padding: 4px 0px;
+	padding: 0.25em 0em;
 	font-size: 0.75em;
 }
 
 /** forum stuff **/
-#forum-thread li {border:1px solid #eee; border-bottom: 1px solid #F7F3ED; float:left; width: 97%; list-style: none; }
+#forum-thread li {border: thin solid #eee; border-bottom: thin solid #F7F3ED; float: left; width: 97%; list-style: none; }
 #forum-thread li.even { background-color: #F7F3ED; border-top: none; }
 #forum-thread li.odd { background-color: #fff; }
-div.forum-post-author { float:left; width:150px; padding:8px 10px; }
-div.forum-post-author a.title {font-size: 1.1em; line-height: 1.2em; font-weight: bold; text-decoration:none; }	
-div.forum-post-author img.profile-picture { border: 2px solid #F7F3ED; text-align:right;}
-div.forum-post-content { margin-left: 150px; padding: 5px 0px 18px 18px;}
-div.forum-post-content h3 { font-weight: 500; float:left;clear:right; }
-div.forum-post-ctrl { float: right; padding-right: 5px; color: #a1a1a1;}
+div.forum-post-author { float: left; width: 9.375em; padding: 0.5em 0.625em; }
+div.forum-post-author a.title {font-size: 1.1em; line-height: 1.2em; font-weight: bold; text-decoration: none; }	
+div.forum-post-author img.profile-picture { border: 0.125em solid #F7F3ED; text-align: right;}
+div.forum-post-content { margin-left: 9.375em; padding: 0.313em 0 1.125em 1.125em;}
+div.forum-post-content h3 { font-weight: 500; float: left;clear: right; }
+div.forum-post-ctrl { float: right; padding-right: 0.313em; color: #a1a1a1;}
 div.forum-post-ctrl a { text-decoration: none; }
-div.forum-post-ctrl span { color: black; background-color: #fefdc2; padding: 3px; }
-div.forum-post-content p.date { color: #a1a1a1; border-bottom: 1px solid #F7F3ED; }
-div.forum-post-content div.body p { margin-bottom:1em; }
-div.forum-paginator{border:thin #cccccc solid; padding:.3em; width:95%;margin:auto;background-color:#F7F3ED;}
-span.forum-paginator-active{font-weight:700;text-decoration:underline; height:2em;}
+div.forum-post-ctrl span { color: black; background-color: #fefdc2; padding: 0.188em; }
+div.forum-post-content p.date { color: #a1a1a1; border-bottom: thin solid #F7F3ED; }
+div.forum-post-content div.body p { margin-bottom: 1em; }
+div.forum-paginator{border: thin #cccccc solid; padding: .3em; width: 95%;margin: auto;background-color: #F7F3ED;}
+span.forum-paginator-active{font-weight: 700;text-decoration: underline; height: 2em;}
 
 
 
 /** inbox stuff - reuses some of the forum layout **/
-/*#inbox-msg li {border:1px solid #eee; border-bottom: 1px solid #F7F3ED; width: 95%; list-style: none; min-height: 11em;}*/
+/*#inbox-msg li {border: 1px solid #eee; border-bottom: 1px solid #F7F3ED; width: 95%; list-style: none; min-height: 11em;}*/
 /*
 div.toolcontainer{
-	width:90%; 
-	margin:auto; 
-	border:thin solid #e8e8e8;
+	width: 90%; 
+	margin: auto; 
+	border: thin solid #e8e8e8;
 } 
 */
 	
-div#topnavlistcontainer {
+div#topnavlistcontainer { /*08.11.10 Symon: condensing margin and border styles */
 	background-color: #F4F4F4;
-	margin-top:2em;
-	margin-bottom:1em;
-	/*padding-right:1.25em;*/
-	border-top-width: 1px;
-	border-right-width: 0px;
-	border-bottom-width: 1px;
-	border-left-width: 0px;
-	border-top-style: solid;
+	/*margin-top: 2em;
+	margin-bottom: 1em;*/
+	
+	margin: 0 0 1em 0;
+	/*padding-right: 1.25em;*/
+	border: thin #999 solid;
+	border-left: none;
+	border-right: none;
+			
+	/*border-top-width: thin;
+	border-right-width: 0em;
+	border-bottom-width: thin;
+	border-left-width: 0em;
+	border-top-style: solid;*/
 	/*border-right-style: none;*/
-	border-bottom-style: solid;
+	/*border-bottom-style: solid;*/
 	/*border-left-style: none;*/
-	border-top-color: #999;
+	/*border-top-color: #999;*/
 	/*border-right-color: #999;*/
-	border-bottom-color: #999;
+	/*border-bottom-color: #999;*/
 	/*border-left-color: #999;*/
 	
-	/* 23.10.2010  10:14P Symon: Adjustment of the TOPNAV Spacing, looks better. */
+	/* 23.10.2010  10: 14P Symon: Adjustment of the TOPNAV Spacing, looks better. */
 	Padding: 0.5em 1.25em 0.2em 1em;	
 }
 
 #topnavlist a:hover {
-	color:#3866c4 !important;
-	text-decoration:underline !important;
-	background-color:transparent;
+	color: #3866c4 !important;
+	text-decoration: none !important; /* 08.11.10 Symon: Again, TEMP removing excess visual noise*/
+	background-color: transparent;
 }
 
 #topnavlist a.active {
-	color:#3866c4 !important;
+	color: #3866c4 !important;
 	background-color: transparent;
-	font-weight:bold;
-	text-decoration:none;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 ul#topnavlist {
 	/*padding-top: 5px;
 	margin-top: 0px;
-	margin-left:0;*/
+	margin-left: 0;*/
 	
 	/* Armin 15.09.2010: Fixed fontsize influences a11y feature, trying % instead */
 	font-size: 82%;
 	
-	/* 19.10.2010 7:08P Symon: Adjust the margin for global nav */
+	/* 19.10.2010 7: 08P Symon: Adjust the margin for global nav */
 	margin: 0;
 	padding: 0;
 }
 
-	/* 19.10.2010 10:20P Symon: Duplicate style? TESTED, Didn't break. */
+	/* 19.10.2010 10: 20P Symon: Duplicate style? TESTED, Didn't break. */
 /*div#topnavlistcontainer*/
 ul#topnavlist li {
 	list-style-type: none !important;
-	display:box;
-	float:left;
-	margin-left:0;
-	padding-left:-100px;
-	line-height:250%;
+	display: box;
+	float: left;
+	margin-left: 0;
+	padding-left: -6.25em;
+	line-height: 250%;
 	
 	/*white-space: nowrap;
 	list-style: none;
@@ -1743,34 +1803,38 @@ ul#topnavlist li {
 	margin: 0px;*/
 }
 
-/* 19.10.2010 11:40P Symon: Hides the mobile youtube link from default web browser, can be found again in blackberry.css. */
+ul#topnavlist img { /* 08.11.10 Symon: adjusting the vertical spacing of the icons BETTER */
+	vertical-align: middle;
+}
+
+/* 19.10.2010 11: 40P Symon: Hides the mobile youtube link from default web browser, can be found again in blackberry.css. */
 .hide_test {
-	visibility:hidden;
-	display:none; /* 25.10.2010 3:46P Symon: Apparently this hides the content from a screen reader, this avoids confusion */
+	visibility: hidden;
+	display: none; /* 25.10.2010 3: 46P Symon: Apparently this hides the content from a screen reader, this avoids confusion */
 	height: 0;
 	width: 0;
 	margin: 0;
 	padding: 0;
 }
 
-.nav-break {color:#666; }
-.nav-break2 {color:#eee;}
+.nav-break {color: #666; }
+.nav-break2 {color: #eee;}
 
 ul#topnavlist li a:hover, ul#topnavlist li a:focus, ul#topnavlist li a.active {
    /* background-color: #F4F4F4;*/
     color: black;
-	text-decoration:none;
+	text-decoration: none;
 	
 }
 
 ul#topnavlist li a {
     /* The normal, unselected tabs. They are all links */
     color: #000;
-	font-weight:normal;
+	font-weight: normal;
     height: 1.5em;
 	/* Armin 21.09.2010: change padding a bit to squezze in headers on 1024x768 and avoid wrapping */
     padding: 0em 1.3em 0em;
-   	text-decoration:none;
+   	text-decoration: none;
 	
 }
 
@@ -1778,24 +1842,24 @@ ul#topnavlist li a.selected {
     /* The selected tab. There's only one of these */
     color: #000;
     font-weight: bold;
-	font-weight:bold;
+	font-weight: bold;
 }
 
-ol#tools>li:hover {
-	border: 1px solid #e0e0e0;
+ol#tools>li: hover {
+	border: thin solid #e0e0e0;
 	background-color: #efefef; 
 }
 
 /*  tool list on admin home and manage screens  */
  li.top-tool { 
 	list-style: none;
-	padding: 2px 2px 2px 15px;
-	margin-bottom: 5px; 
+	padding: 0.125em 0.125em 0.125em 0.938em;
+	margin-bottom: 0.313em; 
 	line-height: 200%; 
 	background-color: #fdfdfd; 
-	border-bottom: 1px solid #efefef; 
+	border-bottom: thin solid #efefef; 
 	/* -moz-border-radius: 4px;  */
-	border: 1px solid #eeeeff;}
+	border: thin solid #eeeeff;}
 
 li.top-tool a {  font-weight: bold; } /* ol#tools>li>a */ 
 
@@ -1806,61 +1870,61 @@ li.child-tool a {
 
 /* ol#tools>li>ul, */ 
 ul.child-top-tool {
-	margin-top: -5px;
-	padding-left: 0px;
-	margin-left: 0px;
+	margin-top: -0.313em;
+	padding-left: 0em;
+	margin-left: 0em;
 	display: inline;
 }
-ul.child-top-tool:before {
+ul.child-top-tool: before {
 	content: " : ";
 }
 
 /* ol#tools>li>ul>li, */ 
 li.child-tool {
 	display: inline;
-	margin-right: 5px;
+	margin-right: 0.313em;
 	font-size: x-small;
 }
 
 /* to modify  tool icons on the course home page */
 /*
 #icon-color-filter{
-	width:3.9em;
-	height:3.85em;
-	background-color:#000000;
-	-moz-opacity:0.5;
-	  filter:alpha(opacity=10);
-	opacity:.10;
-	margin-top:-3.85em;
-	margin-left:1.90em;
+	width: 3.9em;
+	height: 3.85em;
+	background-color: #000000;
+	-moz-opacity: 0.5;
+	  filter: alpha(opacity=10);
+	opacity: .10;
+	margin-top: -3.85em;
+	margin-left: 1.90em;
 
 }
 */
 .img-size-home {
-	height:3.85em;
-	width:3.9em;
+	height: 3.85em;
+	width: 3.9em;
 }
 
 /* browse courses */
 div.browse-course {
 	width: 28em;
-	padding-bottom: 10px;
+	padding-bottom: 0.625em;
 	background-color: #fffaf0;
-	border:1px #6F7172 solid;
-	font-size:90%;
-	min-height:18em;
-	margin:auto;
-	margin-left:1em;
-	margin-top:1em;
+	border: thin #6F7172 solid;
+	font-size: 90%;
+	min-height: 18em;
+	margin: auto;
+	margin-left: 1em;
+	margin-top: 1em;
 }
 
 dl.browse-course {
 	width: 90%;
-	padding-bottom: 10px;
+	padding-bottom: 0.625em;
 	background-color: #fffaf0;
 
-	margin:auto;
-	margin-left:1em;
+	margin: auto;
+	margin-left: 1em;
 }
 dl.browse-course dt {
 	float: left;
@@ -1868,14 +1932,14 @@ dl.browse-course dt {
 	width: 25%;
 	text-align: right;
 	clear: left;
-	padding: 5px 10px 5px 0px;
+	padding: 0.313em 0.625em 0.313em 0em;
 	vertical-align: middle;
 
 }
 dl.browse-course dd {
-	margin-bottom: 5px;
+	margin-bottom: 0.313em;
 	clear: right;
-	padding: 5px 0px 5px 10px;
+	padding: 0.313em 0em 0.313em 0.625em;
 	margin-left: 26%;
 
 }
@@ -1884,45 +1948,45 @@ dl.browse-course dd {
 /*  form fields grouping for WCAG 2.0 conformance*/
 
 fieldset.group_form{
-	width:90%;
-	/*border:thin #6D7B8D solid;*/
+	width: 90%;
+	/*border: thin #6D7B8D solid;*/
   /* weird thing. j  	min-height: 170px; */
-	padding:.em;
+	padding: 0em;
 }
 
-fieldset {border:0 !important;}
+fieldset {border: 0 !important;}
 
 legend.group_form{
 	
 	font-weight: 600;
 	color: black;
-	padding: .5em;
+	padding: 0.5em;
 }
 
 div.current_box legend.group_form{
 	
 	font-weight: 600;
 	color: black;
-	padding: .5em .5em 0.5em 0em;
+	padding: 0.5em 0.5em 0.5em 0em;
 }
 
-.current_box {line-height:200%;}
+.current_box {line-height: 200%;}
 /* file storage */
 
 #fsfloat1{
-	float:right;
+	float: right;
 }
 #fsfloat2{
-	float:right;
-	width:48%;
+	float: right;
+	width: 48%;
 }
 
 
 /* highlight active links for WCAG 2.0 conformance */
 /* NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO 
 a:active,a:hover,a:focus{
-background-color:#F6EAD6; 
-	color:#000000;
+background-color: #F6EAD6; 
+	color: #000000;
 }
 */
 
@@ -1932,46 +1996,46 @@ background-color:#F6EAD6;
 
 #contentcolumn_shiftright {
     margin-right: 2em;
-margin-left:1em;
-margin-top:1em;
-	width:60%;
-	float:left;
+margin-left: 1em;
+margin-top: 1em;
+	width: 60%;
+	float: left;
 
 }
 /* Armin -> to move to the left (search for other leftcolumn
 #leftcolumn{
     float: right;
-	margin-top:-90px;
+	margin-top: -90px;
 	
 }
 */
 #home-links{
-clear:left;
+clear: left;
 }
 
 div#menutoggle{
-	width:1em;
+	width: 1em;
 
 
 }
-div#menutoggle a:link {text-decoration:none;
-color:#999;}
+div#menutoggle a:link {text-decoration: none;
+color: #999;}
 
-div#menutoggle a {text-decoration:none;
-color:#999;}
+div#menutoggle a {text-decoration: none;
+color: #999;}
 
-div#menutoggle a:hover {text-decoration:underline; color:#666 !important; background-color:transparent !important;}
+div#menutoggle a:hover {text-decoration: underline; color: #666 !important; background-color: transparent !important;}
 
-div#menutoggle a:visited {text-decoration:none;
-color:#999;}
+div#menutoggle a:visited {text-decoration: none;
+color: #999;}
 
 #fsfloat2{
-	float:left;
-	width:48%;
+	float: left;
+	width: 48%;
 }
 
 #fsfloat1{
-	float:left;
+	float: left;
 }
 
 
@@ -1979,39 +2043,39 @@ color:#999;}
 div.column_primary {
 	float: left;
 	width: 42%;
-	margin: 5px;
-	padding: 0px;
-	min-width: 170px;
+	margin: 0.313em;
+	padding: 0em;
+	min-width: 10.625em;
 /*	position: relative;*/
 }
 
 div.column_equivalent{
 	float: left;
 	width: 52%;
-	margin-left: 15px;
-	margin-top: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	min-width: 170px;
-	padding: 5px;
-	border: 1px solid #EEE;
+	margin-left: 0.938em;
+	margin-top: 0.313em;
+	margin-right: 0.313em;
+	margin-bottom: 0.313em;
+	min-width: 10.625em;
+	padding: 0.313em;
+	border: thin solid #EEE;
 	background-color: #FFF;
 /*	position: relative;*/
 
 }
 
 div.resource_box{
-	border: 1px solid #aaa;
+	border: thin solid #aaa;
 	width: 95%;
-	margin: 5px;
-	padding: 5px;
-	min-width: 150px;
+	margin: 0.313em;
+	padding: 0.313em;
+	min-width: 9.375em;
 	background-color: #eee;
 /*	position: relative;*/
 }
 
 h2.alternatives_to{
-	margin-top: 12px;
+	margin-top: 0.75em;
 	font-size: 90%;
 	color: #A50707;
 
@@ -2019,11 +2083,11 @@ h2.alternatives_to{
 }
 
 div.alternative_box{
-	border: 1px solid #ddd;
+	border: thin solid #ddd;
 	/*width: 90%;*/
-	margin: 5px;
-	padding: 5px;
-	min-width: 150px;
+	margin: 0.313em;
+	padding: 0.313em;
+	min-width: 9.375em;
 	background-color: #fff;
 /*	position: relative;*/
 }
@@ -2050,145 +2114,146 @@ label.primary a{
 	margin-bottom: -1em;
 	margin-left: 0;
 	width: 50%;
-	border: solid 1px white;
+	border: solid thin white;
 }
 
 #toc a{
-	display:block;
-	margin:3px;
+	display: block;
+	margin: 0.188em;
 	}
 	
 #toc .h2{
-	padding:0.8em 0 0 1em;
-	font-size:80%;
+	padding: 0.8em 0 0 1em;
+	font-size: 80%;
 }
 
 #toc .h3{
-	padding:0 0 0 2em;
-	font-size:80%;
-	font-weight:normal;
+	padding: 0 0 0 2em;
+	font-size: 80%;
+	font-weight: normal;
 }
 
 #toc .h4{
-	padding:0 0 0 3em;
-	font-size:80%;
-	font-weight:normal;
+	padding: 0 0 0 3em;
+	font-size: 80%;
+	font-weight: normal;
 }
 
 #toc .h5{
-	padding:0 0 0 3.5em;
-	font-size:80%;
-	font-weight:normal;
+	padding: 0 0 0 3.5em;
+	font-size: 80%;
+	font-weight: normal;
 }
 
 #toc .h6{
-	padding:0 0 0 4em;
-	font-size:80%;
-	font-weight:normal;
+	padding: 0 0 0 4em;
+	font-size: 80%;
+	font-weight: normal;
 }
 /* Symon - added: font-weight, top padding to .h2, converted Px to Em END*/
 
 #side-menu{
-    overflow:hidden;
-   	/* float:right;*/
+    overflow: hidden;
+   	/* float: right;*/
     /* Added by Armin */
-   	width:100%;
+   	width: 100%;
  
- /* 19.10.2010 12:46P Symon: Removal of PADDING/MARGIN that had very little impact*/
-    margin: 0 /*em 0.2em 0em 0em*/;
+ /* 19.10.2010 12: 46P Symon: Removal of PADDING/MARGIN that had very little impact*/
+    /*margin: 0em 0.2em 0em 0em*/
+	margin: 0; /* 08.11.10 Symon: Increased spacing between side-menu and content column*/
     background-color: #ffffff;
-    border-radius: .3em .3em 0em 0em;
+    border-radius: 0.3em 0.3em 0em 0em;
  /* bye bye mozilla   -moz-border-radius: .3em .3em 0em 0em;
-    -moz-box-shadow:.1em .0em .1em #999999;
+    -moz-box-shadow: .1em .0em .1em #999999;
     box-shadow: .1em .0em .1em #999999; */
     padding: 0em /*.2em .2em .2em*/;
-    height:100%;
+    height: 100%;
     /* Added by Armin */
 }
 
 /* cleans up glossary question mark line spacing*/
 sup{
 	border: 1pt solid #B8AE9C;
-	vertical-align:bottom;
+	vertical-align: bottom;
 	margin-top: 1em;
 }
 
 /* jQuery tooltip styles */
 #tooltip{
-	position:absolute;
-	z-index:3000;
-	border:1px solid #999;
-	background-color:#F3F6FA;
-	padding:5px;
-	width:20%;
+	position: absolute;
+	z-index: 3000;
+	border: thin solid #999;
+	background-color: #F3F6FA;
+	padding: 0.313em;
+	width: 20%;
 }
 #tooltip h3,#tooltip div{
-	margin:0;
+	margin: 0;
 }
 
 /* style for home page modules "detail view" */
 div.home_box {
 	width: 29em;
-	height: 150px;	
-	padding-top: 15px;
+	height: 9.375em;	
+	padding-top: 0.938em;
 	float: left;
 }
 
 .outside_box{
-	margin-left:.4em;
-	background-color:#F3F6FA;
-	width:28em;
-	height:9.8em;
+	margin-left: .4em;
+	background-color: #F3F6FA;
+	width: 28em;
+	height: 9.8em;
 }
 
 .inside_box{
-	width:100%;
-	margin:auto;
-	height:52%;
-	margin-bottom:.2em;
-	background:#F3F6FA;
+	width: 100%;
+	margin: auto;
+	height: 52%;
+	margin-bottom: .2em;
+	background: #F3F6FA;
 
 }
 .details_or{
-	width:28.8em;
-	height:9.8em;
-	margin:0;
-	background-image:url(images/details_r.png);
+	width: 28.8em;
+	height: 9.8em;
+	margin: 0;
+	background-image: url(images/details_r.png);
 	background-position: top right;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 .details_ol{
-	height:9.8em;
-	margin:0px;
-	width:.45em;
-	background-image:url(images/details_l.png);
+	height: 9.8em;
+	margin: 0em;
+	width: .45em;
+	background-image: url(images/details_l.png);
 	background-position: top left;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 .details_ir{
-	width:.5em;
-	height:100%;
-	float:right;
-	background-image:url(images/details_ir.png);
+	width: .5em;
+	height: 100%;
+	float: right;
+	background-image: url(images/details_ir.png);
 	background-position: top right;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 .details_il{
-	height:100%;
-	float:left;
-	background-image:url(images/details_il.png);
+	height: 100%;
+	float: left;
+	background-image: url(images/details_il.png);
 	background-position: top left;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 .home-title{
 	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
 	font-size: 125%;
 }
 .buttonbox{
-	float:right;
+	float: right;
 }
 .details_text{
-	margin-left:1em;
+	margin-left: 1em;
 }
 .draggable_selected {
 	background-color: transparent;
@@ -2201,32 +2266,57 @@ div.home_box {
 /*****************************/
 	
 div#subnavlistcontainer {
-/*
-	width:100%;
-margin:auto;*/
-    margin:auto;
-    height:auto;
+	/*width: 100%;
+	margin: auto;*/
+	
+	/* 08.11.10 Symon: Added left/right auto margin and 0 padding */
+    margin: 0 auto 0 auto;
+    height: auto;
+	
+	padding: 0;
 }
+
 div#subnavbacktopage {
-	padding-top:5px;
-	float:left;
+	padding-top: 0.313em;
+	float: left;
 }
 
 div.toolcontainer{
-	width:90%;
-	margin:auto;
-	border:thin solid #e8e8e8;
-	padding-top:1em;
-	padding-bottom:1em;
+	width: 90%;
+	margin: auto;
+	border: thin solid #e8e8e8;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
+/* -------------------------------------All of these were commented out------*/
+
+/*ul#subnavlist {
+}
+
+ul#subnavlist li {
+}
+
+ul#subnavlist li a:hover, ul#subnavlist li a:focus, ul#subnavlist li a.active{
+}
+
+ul#subnavlist li.selected {
+}
+
+ul#subnavlist li.selected a {
+}
+
+ul#subnavlist li a {
+}*/
+
+/* 08.11.10 Symon: WHAT IS GOING ON HERE? */
 /*ul#subnavlist {
 	padding-top: 5px;
 	margin-top: 0px;
 	font-family: Verdana,Helvetica,Arial,serif;
-	float:left;
-	margin-left:0;
-	padding-left:0;
+	float: left;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 ul#subnavlist li {
@@ -2234,8 +2324,8 @@ ul#subnavlist li {
 	list-style: none;
 	display: inline;
 	margin: 0px;
-	font-weight:700;
-	text-align:center;
+	font-weight: 700;
+	text-align: center;
 	border-top-width: thin;
 	border-right-width: thin;
 	border-left-width: thin;
@@ -2246,7 +2336,7 @@ ul#subnavlist li {
 	border-top-color: #cccccc;
 	border-right-color: #cccccc;
 	border-left-color: #cccccc;
-	list-style-position:inside;
+	list-style-position: inside;
 	padding-top: .5em;
 	padding-right: 1em;
 	padding-bottom: .7em;
@@ -2255,30 +2345,32 @@ ul#subnavlist li {
 
 ul#subnavlist li a:hover, ul#subnavlist li a:focus, ul#subnavlist li a.active{
   	color: black;
-	text-decoration:none;
+	text-decoration: none;
 	
 }
 
-ul#subnavlist li.selected {background-color:#5984C4;
+ul#subnavlist li.selected {background-color: #5984C4;
 }
 
-ul#subnavlist li.selected a {font-weight:bold;
-color:#fff;}
+ul#subnavlist li.selected a {font-weight: bold;
+color: #fff;}
 
 ul#subnavlist li a {
     /* The normal, unselected tabs. They are all links */
-   	color: #000;
+   	/*color: #000;
     	height: 1.5em;
-   	text-decoration:none;
+   	text-decoration: none;
 	
-	font-weight:500;
+	font-weight: 500;*/
 
 /*}*/
 
+/*----------END--------------------*/
+
 div.menuedit{
-float:right;
-margin-top:-1.2em; 
-border:1px solid #cccccc;
+float: right;
+margin-top: -1.2em; 
+border: thin solid #cccccc;
 }
 
 
@@ -2288,59 +2380,73 @@ border:1px solid #cccccc;
 
 #advanced-search {
 	float: right; 
-	margin-right:12.5em; 
-	margin-top:10px;
+	margin-right: 12.5em; 
+	margin-top: 0.625em;
 	/* Armin 15.09.2010: replace static font-size 7pt with 73% */
 	font-size: 73%;
-	font-weight:normal;
+	font-weight: normal;
 }
 
-#advanced-search a {text-decoration:underline;
-color:#5984C4;
-font-weight:normal;}
+#advanced-search a {
+	text-decoration: underline;
+	color: #5984C4;
+	font-weight: normal;
+}
 
-.clear {clear:both;}
+.clear {
+	clear: both;
+}
 
-#topnav-search {float:right;
+#topnav-search {
+	float: right;
 }
 
 
+/* 08.11.10 Symon: fixed the spacing after conversion from PX to EM */
 
 ul#subnavlist, #subnavlist .active { /* general settings */
-text-align: left; /* set to left, right or center */
-margin: 1em 0 2em 0; /* set margins as desired */
-/* Armin 15.09.2010: replace static font-size 8pt with 82% */
-font:  82% helvetica, arial, sans-serif; /* set font as desired */
-border-bottom: 3px solid #5984C4; /* set border COLOR as desired */
-list-style-type: none;
-padding: 3px 10px 0 0; /* THIRD number must change with respect to padding-top (X) below */
-line-height:150%;
-vertical-align:middle;
+	/*text-align: left;  set to left, right or center */
+	margin: 1em 0 2em 0; /* set margins as desired */
+	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
+	font: 95% helvetica, arial, sans-serif; /* set font as desired */
+	border-bottom: 0.2em solid #5984C4; /* set border COLOR as desired */
+	list-style-type: none;
+	padding: 0.3em 1em 0.16em 0; /* THIRD number must change with respect to padding-top (X) below */
+	/*line-height: 150%;*/
+	vertical-align: middle;
 }
 
 ul#subnavlist li, #subnavlist .active { /* do not change */
-display: inline;
+	display: inline;
+	text-align: center;
 }
 
 body#tab1 li.tab1, body#tab2 li.tab2, body#tab3 li.tab3, body#tab4 li.tab4, #subnavlist .active { /* settings for selected tab */
-border-bottom: 1px solid #5984C4; /* set border color to page background color */
-background-color: #5984C4; /* set background color to match above border color */
+	border-bottom: thin solid #5984C4; /* set border color to page background color */
+	background-color: #5984C4; /* set background color to match above border color */
 }
 
 body#tab1 li.tab1 a, body#tab2 li.tab2 a, body#tab3 li.tab3 a, body#tab4 li.tab4, body#tabselected a, #subnavlist .active { /* settings for selected tab link */
-background-color: #fff; /* set selected tab background color as desired */
-color: #000; /* set selected tab link color as desired */
-position: relative;
-top: 1px;
-padding-top: 4px; /* must change with respect to padding (X) above and below */
+	background-color: #fff; /* set selected tab background color as desired */
+	color: #000; /* set selected tab link color as desired */
+	
+	/* 08.11.10 Symon: Removed as it appeared to have no impact overall */
+	/*position: relative;
+	top: 0.063em;
+	padding-top: 0.25em;  must change with respect to padding (X) above and below */
 }
 
 ul#subnavlist li a{ /* settings for all tab links */
-padding: 3px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
-border: 1px solid #666; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+/*padding: 0.3em 0.25em;  set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: thin solid #666; /* set border COLOR as desired; usually matches border color specified in #tabnav */
 background-color: #fff; /* set unselected tab background color as desired */
 color: #000; /* set unselected tab link color as desired */
-margin-right: 0px; /* set additional spacing between tabs as desired */
+/*margin-right: 0em;  set additional spacing between tabs as desired */
+
+/* 08.11.10 Symon: fixed the spacing after conversion from PX to EM */
+margin: 0 0.4em 0 0;
+padding: 0.3em 1em 0.3em 1em;
+
 text-decoration: none;
 border-bottom: none;
 /* Armin 15.09.2010: replace static font-size 8pt with 82% */
@@ -2349,39 +2455,46 @@ font-size: 82%;
 
 ul#subnavlist a:hover { /* settings for hover effect */
 background: #5984C4; /* set desired hover color */
-color:#fff;
+color: #fff;
 
 }
 
 ul#subnavlist li a:hover, ul#subnavlist li a:focus, ul#subnavlist li a.active, #subnavlist .active {
-background: #5984C4; /* set desired hover color */
-color:#fff;
+	background: #5984C4; /* set desired hover color */
+	color: #fff;
 }
 
 #subnavlist .active { /* settings for all tab links */
-padding: 3px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
-border: 1px solid #5984C4; /* set border COLOR as desired; usually matches border color specified in #tabnav */
-background-color: #5984C4; /* set unselected tab background color as desired */
-color: #fff; /* set unselected tab link color as desired */
-margin-right: 0px; /* set additional spacing between tabs as desired */
-text-decoration: none;
-border-bottom: none;
-font-weight:bold;
+	/*padding: 0.188em 0.25em;  set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+	border: thin solid #5984C4; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+	background-color: #5984C4; /* set unselected tab background color as desired */
+	color: #fff; /* set unselected tab link color as desired */
+	/*margin-right: 0em;  set additional spacing between tabs as desired */
+	
+	/* 08.11.10 Symon: fixed the spacing after conversion from PX to EM */
+	margin: 0 0.4em 0 0;
+	padding: 0.3em 1em 0.3em 1em;
+	
+	text-decoration: none;
+	border-bottom: none;
+	font-weight: bold;
+	
+	vertical-align: middle;
 }
 
 .site-name {
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	font-weight:bold;
-	color:#5984C4;
+	font-weight: bold;
+	color: #5984C4;
 	/* Armin 15.09.2010: allow a font-size that is flexible and changes with a11y settings by replacing 12pt with 125% */
-	font-size:125%;
-	margin:0;
-	padding:0;
+	font-size: 125%;
+	margin: 0;
+	padding: 0;
 }
 
 #course_title_container {
-	margin-bottom:.5em;
+	margin-bottom: .5em;
 	margin-left: 2em;
 }
 
@@ -2390,76 +2503,94 @@ h2#brand-tag {
 /* 	font-family: Arial, Helvetica, sans-serif; */
 	/* Armin 15.09.2010: replace static font-size 12pt with 125% */
 	font-size: 125%;
-	color:#86868B;
-	margin-top:-2em;
+	color: #86868B;
+	margin-top: -2em;
 }
 
 
-#toc a:link, a.dimmed:link, a:link h2, a.dimmed:link h2 {
-color:#26436a;
-text-decoration:none;
+#toc a:link, a.dimmed: link, a:link h2, a.dimmed: link h2 {
+	color: #26436a;
+	text-decoration: none;
 }
 
-ol
-{margin-left:10%;
-margin-right:10%;}
+ol {
+	margin-left: 10%;
+	margin-right: 10%;
+}
 
 .current_container {
-width:38%;
-margin-bottom:30px;
-float:left;
-margin-right:10pt;}
+	width: 38%;
+	margin-bottom: 1.875em;
+	float: left;
+	margin-right: 0.8em;
+}
 
 .recent_activity_container {
-	width:50%;
+	width: 60%;
 	margin-bottom: 2em;
-	float:left;
-	margin-right:1em;
+	float: left;
+	margin-right: 1em;
+	
+	
 }
 
-.recent_activity_box a {font-weight:normal;} 
+.recent_activity_box a {
+	font-weight: normal;
+} 
 
-.current_box {background-color:#F3F6FA;
-padding:.8em;
-}
-.recent_activity_box {background-color:#fff;
+.current_box {
+	background-color: #F3F6FA;
+	padding: 0.8em;
 }
 
-.recent_item {background-color:#F3F6FA;
-margin-bottom:.7em;
-padding:.5em;}
+.recent_activity_box {
+	background-color: #fff;
+}
+
+.recent_item {
+	background-color: #F3F6FA;
+	/*margin-bottom: 0.7em;*/
+	margin: 0 0 0.7em 0; /* 08.11.10 Symon */
+	padding: 0.5em;
+}
+
+.recent_item p { /* 08.11.10 Symon: More control over the recent activity content */
+	line-height: 1.3em;
+	font-size: 0.9em;
+}
+	
 
 blockquote {
 /* Armin 22.09.2010: Take out explicit color so that inverting works */
-/* 	background-color:#FFFFFF; */
-/* 	color:#000000; */
-	float:left;
-	font-size:1.5em;
-	font-style:italic;
-	margin:0 2em 0 0;
-	padding:0.2em;
-	width:14em;
-	padding-top:1em;
-	padding-bottom:1em;
-	border-top:solid 2px black;
-	border-bottom: solid 2px black;
-	/*font-family:Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
-	font-style:italic;
+/* 	background-color: #FFFFFF; */
+/* 	color: #000000; */
+	float: left;
+	font-size: 1.5em;
+	font-style: italic;
+	margin: 0 2em 0 0;
+	padding: 0.2em;
+	width: 14em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: solid 0.125em black;
+	border-bottom: solid 0.125em black;
+	/*font-family: Georgia, "Times New Roman", Times, serif; Commenting out to test adaptive text trans*/
+	font-style: italic;
 }
 
 #toc fieldset {
-	margin:0; 
-	padding-bottom:.75em;
+	margin: 0; 
+	padding-bottom: .75em;
 }
 
 fieldset.toc {
 	margin: 0 0 -1em 0;
 	background-color: #e8eef7;
-/* 	width:50%; */
+/* 	width: 50%; */
 }
 
 #toc legend  {
-	/*margin:0;
+	/*margin: 0;
 	padding-top: 1em;
 	padding-right: 0;
 	padding-bottom: 0.5em;
@@ -2468,12 +2599,12 @@ fieldset.toc {
 	font-size: 125%;
 	/* Armin 19.10.2010: remove font-family to allow overwriting by settings */
 /* 	font-family: Arial, Helvetica, sans-serif; */
-	/*margin-top:16pt;*/
-	font-weight:bold;
+	/*margin-top: 16pt;*/
+	font-weight: bold;
 	
-/* 25.10.2010 8:01P Symon: adjusts the TOC HEADER with a single value */ 	
-	margin:0;
-	padding:2em 0 0 0;
+/* 25.10.2010 8: 01P Symon: adjusts the TOC HEADER with a single value */ 	
+	margin: 0;
+	padding: 2em 0 0 0;
 }
 
 /*.sequence-links { border: thin solid green;}*/
@@ -2481,8 +2612,8 @@ fieldset.toc {
 .sequence-links {
 	border: 0 none;
 	font-size: 0.8em;
-/* 25.10.2010 3:49P Symon: Centering the sequence links adding space with MARGIN. Attempting to increase visibility. */
-	/*text-align: center; 25.10.2010 7:43P Symon: Re-aligning to the left, wasn't working within current format. */
+/* 25.10.2010 3: 49P Symon: Centering the sequence links adding space with MARGIN. Attempting to increase visibility. */
+	/*text-align: center; 25.10.2010 7: 43P Symon: Re-aligning to the left, wasn't working within current format. */
 	margin: 2em 0 0 0;
 /* 19.10.2010 Symon: Better spacing for sequence links */
 /* 	margin: 3em -0.7em 0 0; */
@@ -2499,15 +2630,15 @@ ul#content-tool-links li{
         padding: 0 3em 0 0;
         text-align: center;
         font-size: 0.7em;
-        font-weight:bold;
+        font-weight: bold;
         color: #1A4A72;
-        line-height:120%;
+        line-height: 120%;
 }
 
 ul#content-tool-links img{
         border: 0 none;
         display: block;
-        padding-left: 10px;
+        padding-left: 0.625em;
 }
 
 .hidden {
@@ -2537,76 +2668,76 @@ tr.even {
 
 tr.odd {
     background-color: transparent;
-/* 	font-size:1.2em; */
+/* 	font-size: 1.2em; */
 }
 
 /* Content editor wrapper div */
 .editor_wrapper{
-        border:1px solid #cccccc;
-        border-radius:.5em;
+        border: thin solid #cccccc;
+        border-radius: .5em;
         -moz-border-radius: .5em .5em .5em .5em;
         padding: .1em .5em .1em .5em ;
 }
 /* Content editor tabs */
 .editor_buttontab {
-        color:#000000;
+        color: #000000;
         /* Armin 15.09.2010: replace static font-size 10pt with 100% */
         font-size: 100%;
-        border:0;
+        border: 0;
         white-space: nowrap;
         background-color: #ffffff;
-        margin: 0px;
-        font-weight:500;
-        text-align:center;
-        padding:0em 0em 0em;
+        margin: 0em;
+        font-weight: 500;
+        text-align: center;
+        padding: 0em 0em 0em;
 
 }
 .editor_tab{
-        float:left;
-        border-top: 1px solid #cccccc;
-        border-left: 1px solid #cccccc;
-        border-right: 1px solid #cccccc;
-        border-bottom:0;
-        margin-bottom:-.5em;
+        float: left;
+        border-top: thin solid #cccccc;
+        border-left: thin solid #cccccc;
+        border-right: thin solid #cccccc;
+        border-bottom: 0;
+        margin-bottom: -.5em;
         text-align: center;
         white-space: nowrap;
         background-color: #ffffff;
         border-radius: .3em .3em 0em 0em;
         -moz-border-radius: .3em .3em 0em 0em;
-        -moz-box-shadow:.1em .0em .1em #999999;
+        -moz-box-shadow: .1em .0em .1em #999999;
         box-shadow: .1em .0em .1em #999999;
         padding: 0em .2em 0em .2em ;
-        height:1.4em;
+        height: 1.4em;
 }
-.editor_tab:hover, .editor_tab input[type=submit]:hover{
-        background-color:#eeeeee;
+.editor_tab: hover, .editor_tab input[type=submit]: hover{
+        background-color: #eeeeee;
 }
 
 .editor_tab_selected{
-        border-top: 1px solid #cccccc;
-        border-left: 1px solid #cccccc;
-        border-right: 1px solid #cccccc;
-        border-bottom:0;
+        border-top: thin solid #cccccc;
+        border-left: thin solid #cccccc;
+        border-right: thin solid #cccccc;
+        border-bottom: 0;
         padding: 0em .2em 0em .2em ;
         background-color: #eeeeee;
-        font-weight:bold;
-        text-align:center;
+        font-weight: bold;
+        text-align: center;
         white-space: nowrap;
-        text-decoration:none;
-        border-radius:.3em;
+        text-decoration: none;
+        border-radius: .3em;
         -moz-border-radius: .3em .3em 0em 0em;
-        height:1.4em;
+        height: 1.4em;
 
 }
 .editor_tab input[type=submit]{
-        height:1.2em;
+        height: 1.2em;
 }
 
 /* Preference Editor tabs */
 /* Preferences tabs */
 form>div {
     text-align: left;
-    margin-left: 1px;
+    margin-left: 0.063em;
 };
 
 div.input-form {
@@ -2614,131 +2745,197 @@ div.input-form {
 }
 
 /* Preferences tabs */
+
+.etabbed-list-container {
+	margin: 0 auto 0 auto;
+    height: auto;
+	padding: 0;
+}
+	
 table.etabbed-table     {
-        padding-left:0em;
-        padding-right:5em;
-        /* Armin 15.09.2010: replace static font-size 10pt with 100% */
-        font-size: 100%;
-        width:90%;
-        margin-left:0em;
-        margin-right:auto;
+	padding-left: 0em;
+	padding-right: 5em;
+	/* Armin 15.09.2010: replace static font-size 10pt with 100% */
+	font-size: 100%;
+	width: 100%;
+	margin-left: 0em;
+	margin-right: 0;
 }
 
 /* Armin 04.10.2010: etabbed-table is now etabbed-list */
 ul.etabbed-list, .prefs_tab_selected {
-	list-style-type:none;
+	/*list-style-type: none;
 	display: inline;
 	
-	text-align:left;
-	vertical-align:middle;
-	margin:1em 0 2em;
-	padding:3px 10px 0 0;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1em 0 2em;
+	padding: 0.188em 0.625em 0 0;*/
+	
+	/* 08.11.10 Symon: Fixing this tabbed list to reflect characteristics of others */
+	margin: 1em 0 2em 0;
+	font: 95% helvetica, arial, sans-serif;
+	border-bottom: 0.2em solid #5984C4;
+	list-style-type: none;
+	padding: 0.3em 1em 0.16em 0;
+	vertical-align: middle;
 
-/* 	border-bottom:3px solid #5984C4; 	 */
+/* 	border-bottom: 3px solid #5984C4; 	 */
 }
 
 ul.subnavlist, .prefs_tab_selected, input.prefs_buttontab {
-	font:82%/150% helvetica,arial,sans-serif;
-	background-color:#F3F6FA;
+	font: 95% helvetica,arial,sans-serif;
+	/*background-color: #F3F6FA;*/
 }
 
 ul.subnavlist, .prefs_tab {
-	list-style-type:none;
+	list-style-type: none;
 	display: inline;
 
-	text-align:left;
-	vertical-align:middle;
-	margin:1em 0 2em;
-	padding:3px 10px 0 0;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1em 0 2em;
+	padding: 0.188em 0.625em 0 0;
 
-/* 	border-bottom:3px solid #5984C4; */
+/* 	border-bottom: 3px solid #5984C4; */
 }
 
 ul.subnavlist, .prefs_tab, input.prefs_buttontab {
-	font:82%/150% helvetica,arial,sans-serif;
-	background-color:#F3F6FA;
+	font: 82%/150% helvetica,arial,sans-serif;
+	background-color: #F3F6FA;
 }
 
 /* Armin 04.10.2010: End */
 
 .prefs-tab-spacer {
         background-color: transparent;
-        width: 5px;
+        width: 0.313em;
 }
 .prefs_buttontab {
-        color:#000;
+        color: #000;
         /* Armin 15.09.2010: replace static font-size 10pt with 100% */
         font-size: 100% !important;
         white-space: nowrap;
-        margin: 0px;
-        border:0;
-        font-weight:500;
-        padding:0em 0em 0em;
+        margin: 0em;
+        border: 0;
+        font-weight: 500;
+        padding: 0em 0em 0em;
        
 
 }
 .prefs_tab{
-padding: 3px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
-border: 1px solid #666; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+padding: 0.188em 0.25em; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: thin solid #666; /* set border COLOR as desired; usually matches border color specified in #tabnav */
 background-color: #fff !important; /* set unselected tab background color as desired */
 color: #000; /* set unselected tab link color as desired */
-margin-right: 0px; /* set additional spacing between tabs as desired */
+margin-right: 0em; /* set additional spacing between tabs as desired */
 text-decoration: none;
 border-bottom: none;
 }
 
-.prefs_tab a{background-color:transparent !important}
+.prefs_tab a{background-color: transparent !important}
 
         
       
 
-.prefs_buttontab:hover, .prefs_tab:hover {
-background-color:#5984c4;
-	color:#fff;
-	font-weight:bold;}
+.prefs_buttontab: hover, .prefs_tab: hover {
+background-color: #5984c4;
+	color: #fff;
+	font-weight: bold;}
 .prefs_tab_selected{
 	text-align: center; /* set margins as desired */
 	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
-	font:  82% helvetica, arial, sans-serif; /* set font as desired */
+	font: 82% helvetica, arial, sans-serif; /* set font as desired */
 	list-style-type: none; /* THIRD number must change with respect to padding-top (X) below */
-	line-height:150%;
-	vertical-align:middle;
-	background-color:#5984c4;
-	color:#fff;
-	font-weight:bold;
+	line-height: 150%;
+	vertical-align: middle;
+	background-color: #5984c4;
+	color: #fff;
+	font-weight: bold;
 	margin-top: 1em;
 	margin-right: 0;
 	margin-bottom: 2em;
 	margin-left: 0;
-	padding-top: 3px;
+	padding-top: 0.188em;
 	padding-bottom: 0;
-	padding-left: 10px;
-	padding-right:10px;
+	padding-left: 0.625em;
+	padding-right: 0.625em;
 }
 
 
 /* Added by Armin End*/
 
 /* Styling for browse/enroll links*/
-.begincourse {padding-right:2em;}
+.begincourse {
+	padding-right: 2em;
+}
 
-.begincourse a:link {color:#000; text-decoration:none;}
-.begincourse a:hover {color:#000; background-color:transparent; text-decoration:underline !important;}
-.begincourse a:visited {color:#000; text-decoration:none;}
+.begincourse a:link {
+	color: #000;
+	text-decoration: none;
+}
 
-.enrollme a:link {color:#00A715; text-decoration:none;}
-.enrollme a:hover {color:#00A715; background-color:transparent; text-decoration:underline !important;}
-.enrollme a:visited {color:#00A715; text-decoration:none;}
+.begincourse a:hover {
+	color: #000;
+	background-color: transparent;
+	text-decoration: underline !important;
+}
 
-.unenrollme a:link {color:#C1272D; text-decoration:none;}
-.unenrollme a:hover {color:#C1272D; background-color:transparent; text-decoration:underline !important;}
-.unenrollme a:visited {color:#C1272D; text-decoration:none;}
+.begincourse a:visited {
+	color: #000;
+	text-decoration: none;
+}
 
+.begincourse img {
+	vertical-align: middle;
+}
+
+.enrollme a:link {
+	color: #00A715;
+	text-decoration: none;
+}
+
+.enrollme a:hover {
+	color: #00A715; 
+	background-color: transparent; 
+	text-decoration: underline !important;
+}
+
+.enrollme a:visited {
+	color: #00A715; 
+	text-decoration: none;
+}
+
+.unenrollme a:link {
+	color: #C1272D; 
+	text-decoration: none;
+	font-size: 85%;
+	font-weight: normal;
+}
+
+.unenrollme a:hover {
+	color: #C1272D; 
+	background-color: transparent; 
+	text-decoration: underline !important;
+}
+
+.unenrollme a:visited {
+	color: #C1272D; 
+	text-decoration: none;
+}
+
+.unenrollme img {
+	vertical-align: middle;
+}
 
 /* more misc */
 
 #my_courses_container {
 	padding-bottom: 2.5em;
+	
+	/* 08.11.10 Symon: Adding a border to the container to visually draw it together it */
+	border: 0.2em #CCC solid;
+	margin: -1.6em 0 3em 0; /* 08.11.10 Symon: negative top margin solidifies relationship to title */
 }
 
 /* Armin 16.09.2010: section to change the wizard screen for user settings */
@@ -2753,22 +2950,22 @@ ul#alternatives_shortcuts {
 	font-size: 75%;
 	float: right;
 	padding: 0.25em;
-	margin: 3em 0 0 0; /* 25.10.2010 7:39P Symon: Position shifted left 26.10.2010 10:05A Symon: Removed 10em right MARGIN*/
+	margin: 3em 0 0 0; /* 25.10.2010 7: 39P Symon: Position shifted left 26.10.2010 10: 05A Symon: Removed 10em right MARGIN*/
 }
 
 #alternatives_shortcuts{
-/* 	padding:3em 0 1em 0; */
+/* 	padding: 3em 0 1em 0; */
 }
 
 ul#alternatives_shortcuts li {
 	list-style-type: none !important;
-	padding: 0 0 1em 0; /* 25.10.2010 7:34P Symon: Spacing between items increased */
-/* 	display:box; */
+	padding: 0 0 1em 0; /* 25.10.2010 7: 34P Symon: Spacing between items increased */
+/* 	display: box; */
 /* 	float: right; */
-/* 	margin-left:0; */
-/* 	padding-left:-100px; */
-/* 	line-height:250%; */
-/* 	vertical-align:center; */
+/* 	margin-left: 0; */
+/* 	padding-left: -100px; */
+/* 	line-height: 250%; */
+/* 	vertical-align: center; */
 	
 	
 	/*white-space: nowrap;
@@ -2779,13 +2976,13 @@ ul#alternatives_shortcuts li {
 
 ul#alternatives_shortcuts li a img {
 	text-align: center;
-	vertical-align: middle; /* 25.10.2010 7:30 Symon: Slight adjustment to ADAPTIVE CONTENT icons, better vertical alignment */
+	vertical-align: middle; /* 25.10.2010 7: 30 Symon: Slight adjustment to ADAPTIVE CONTENT icons, better vertical alignment */
 	width: 1.5em;
 	height: 1.5em;
 }
 
 /* Armin 18.10.2010: emphazise browse link in feedback */
 div#info a{
-	color:red;
-	text-decoration:underline;
+	color: red;
+	text-decoration: underline;
 }
