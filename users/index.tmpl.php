@@ -36,7 +36,7 @@
 
                             <?php if ($row['last_cid']): ?>
 							
-							<span class="begincourse"><a href="bounce.php?course=<?php echo $row['course_id'].SEP.'p='.urlencode('content.php?cid='.$row['last_cid']); ?>">Resume Course
+							<span class="begincourse"><a href="bounce.php?course=<?php echo $row['course_id'].SEP.'p='.urlencode('content.php?cid='.$row['last_cid']); ?>"><?php echo _AT('resume_course'); ?>
 								<img src="<?php echo $_base_href;  ?>themes/ocadnew/images/beginarrow.png" border="" alt="<?php echo _AT('resume'); ?>" title="<?php echo _AT('resume'); ?>" /> 
 							</a></span>
 					<?php endif; ?>
