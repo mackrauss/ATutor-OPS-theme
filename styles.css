@@ -1654,8 +1654,8 @@ div.social-left{
     float: left;
     /* Armin end */
 /*    overflow: hidden;*/
-    max-width: 70%;
-	min-width: 70%;
+    max-width: 69%;
+	min-width: 69%;
 	/* j */
 	width: auto;
 	margin: 0 0 0 0;
@@ -2489,7 +2489,7 @@ ul#subnavlist li a:hover, ul#subnavlist li a:focus, ul#subnavlist li a.active, #
 	color: #5984C4;
 	/* Armin 15.09.2010: allow a font-size that is flexible and changes with a11y settings by replacing 12pt with 125% */
 	font-size: 125%;
-	margin: 0;
+	margin: 0 0 0 1.5em;
 	padding: 0;
 }
 
@@ -2746,122 +2746,18 @@ div.input-form {
 
 /* Preferences tabs */
 
-.etabbed-list-container {
-	margin: 0 auto 0 auto;
-    height: auto;
-	padding: 0;
-}
-	
-table.etabbed-table     {
-	padding-left: 0em;
-	padding-right: 5em;
-	/* Armin 15.09.2010: replace static font-size 10pt with 100% */
-	font-size: 100%;
+/* SUB NAV STYLES - Attempting to make the menues look similar Nov 29 2010 Symon */
+
+ul.etabbed-list {
 	width: 100%;
-	margin-left: 0em;
-	margin-right: 0;
+	padding: 0;
+	margin: 0 0 2em 0;
 }
 
-/* Armin 04.10.2010: etabbed-table is now etabbed-list */
-ul.etabbed-list, .prefs_tab_selected {
-	/*list-style-type: none;
+ul.etabbed-list li {
 	display: inline;
-	
-	text-align: left;
-	vertical-align: middle;
-	margin: 1em 0 2em;
-	padding: 0.188em 0.625em 0 0;*/
-	
-	/* 08.11.10 Symon: Fixing this tabbed list to reflect characteristics of others */
-	margin: 1em 0 2em 0;
-	font: 95% helvetica, arial, sans-serif;
-	border-bottom: 0.2em solid #5984C4;
-	list-style-type: none;
-	padding: 0.3em 1em 0.16em 0;
-	vertical-align: middle;
-
-/* 	border-bottom: 3px solid #5984C4; 	 */
+	white-space: nowrap;
 }
-
-ul.subnavlist, .prefs_tab_selected, input.prefs_buttontab {
-	font: 95% helvetica,arial,sans-serif;
-	/*background-color: #F3F6FA;*/
-}
-
-ul.subnavlist, .prefs_tab {
-	list-style-type: none;
-	display: inline;
-
-	text-align: left;
-	vertical-align: middle;
-	margin: 1em 0 2em;
-	padding: 0.188em 0.625em 0 0;
-
-/* 	border-bottom: 3px solid #5984C4; */
-}
-
-ul.subnavlist, .prefs_tab, input.prefs_buttontab {
-	font: 82%/150% helvetica,arial,sans-serif;
-	background-color: #F3F6FA;
-}
-
-/* Armin 04.10.2010: End */
-
-.prefs-tab-spacer {
-        background-color: transparent;
-        width: 0.313em;
-}
-.prefs_buttontab {
-        color: #000;
-        /* Armin 15.09.2010: replace static font-size 10pt with 100% */
-        font-size: 100% !important;
-        white-space: nowrap;
-        margin: 0em;
-        border: 0;
-        font-weight: 500;
-        padding: 0em 0em 0em;
-       
-
-}
-.prefs_tab{
-padding: 0.188em 0.25em; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
-border: thin solid #666; /* set border COLOR as desired; usually matches border color specified in #tabnav */
-background-color: #fff !important; /* set unselected tab background color as desired */
-color: #000; /* set unselected tab link color as desired */
-margin-right: 0em; /* set additional spacing between tabs as desired */
-text-decoration: none;
-border-bottom: none;
-}
-
-.prefs_tab a{background-color: transparent !important}
-
-        
-      
-
-.prefs_buttontab: hover, .prefs_tab: hover {
-background-color: #5984c4;
-	color: #fff;
-	font-weight: bold;}
-.prefs_tab_selected{
-	text-align: center; /* set margins as desired */
-	/* Armin 15.09.2010: replace static font-size 8pt with 82% */
-	font: 82% helvetica, arial, sans-serif; /* set font as desired */
-	list-style-type: none; /* THIRD number must change with respect to padding-top (X) below */
-	line-height: 150%;
-	vertical-align: middle;
-	background-color: #5984c4;
-	color: #fff;
-	font-weight: bold;
-	margin-top: 1em;
-	margin-right: 0;
-	margin-bottom: 2em;
-	margin-left: 0;
-	padding-top: 0.188em;
-	padding-bottom: 0;
-	padding-left: 0.625em;
-	padding-right: 0.625em;
-}
-
 
 /* Added by Armin End*/
 
