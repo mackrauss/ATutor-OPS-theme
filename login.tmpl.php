@@ -105,6 +105,19 @@ if($_config['allow_registration'] ==1){
 
 <!-- End of: Registration and course browse are only shown if allow_registration is set to 1 -->
 </div>
+<div class="column">
+	<!-- video box -->
+	<div class="current_box">
+		<p>Watch the video and learn how ATutor transforms content and interface features according to the user needs</p>
+		<object width="320" height="190">
+		  <param name="movie" value="http://www.youtube.com/v/7JTdLW5rHQs?fs=1&amp;hl=en_US"></param>
+		  <param name="allowFullScreen" value="true"></param>
+		  <param name="allowscriptaccess" value="always"></param>
+		  <embed src="http://www.youtube.com/v/7JTdLW5rHQs?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="190"></embed>
+		</object>
+	</div>
+	<!-- Login box end -->
+</div>
 <?php } ?>
 
 <!--	<br style="clear:both;" /> -->
