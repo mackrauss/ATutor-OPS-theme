@@ -83,6 +83,8 @@ global $system_courses, $_custom_css, $db, $instructor;
     <script src="<?php echo $this->base_path; ?>jscripts/ATutor.js" type="text/javascript"></script>   
     <?php echo $this->custom_css; ?>
     <style id="pref_style" type="text/css"></style> 
+	<!-- Armin 04.11.2010: Including YouTube.js file to test creation of RTSP links for BlackBerry via YouTube API -->
+<!-- 	<script src="<?php echo $this->base_path.'themes/'.$this->theme; ?>/include/YouTube.js" type="text/javascript"></script> -->
     
 </head>
 <body onload="<?php echo $this->onload; ?>">
